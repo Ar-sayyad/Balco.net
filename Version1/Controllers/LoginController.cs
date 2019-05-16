@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Version1.Models;
+namespace Version1.Controllers
+{
+    public class LoginController : Controller
+    {
+        // GET: Login
+        public ActionResult Index()
+        {
+            if (Session["UserType"] != null)
+            {
+                return Redirect("Home");
+            }
+            else
+            {
+                ViewData["Title"] = "Login";
+                return View();
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Index(User user)
+        {
+
+            User objUser = new User();
+            User returnedUser = objUser.Login(user);
+
+            if (returnedUser != null)
+            {
+                Session["UserName"] = returnedUser.UserName;
+                Session["Id"] = Convert.ToString(returnedUser.Id);
+                Session["FullName"] = returnedUser.FirstName + " " + returnedUser.LastName;
+                Session["UserType"] = returnedUser.UserType;
+                return Content("1");
+            }
+            else
+            {
+                return Content("Invalid Login Details.");
+            }
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Clear();
+
+            return RedirectToAction("Index", "Login");
+        }
+
+    }
+}
