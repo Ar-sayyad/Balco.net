@@ -11,6 +11,7 @@ namespace Version1.Controllers
         // GET: Manual
         public ActionResult Index()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Manual Entry >> CPP 540 Coal Analysis";
@@ -24,6 +25,7 @@ namespace Version1.Controllers
         }
         public ActionResult CppfiveFourtyCA()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Manual Entry >> CPP 540 Coal Analysis";
@@ -37,6 +39,7 @@ namespace Version1.Controllers
         }
         public ActionResult CppfiveFourtyDGR()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Manual Entry >> CPP DGR Manual Entry";
@@ -53,6 +56,7 @@ namespace Version1.Controllers
         /********PP 1200 MW *******/
         public ActionResult pptwelveHCA()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Manual Entry >> PP 1200 Coal Analysis";
@@ -66,6 +70,7 @@ namespace Version1.Controllers
         }
         public ActionResult ippsixHDGR()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Manual Entry >> IPP 600 DGR Manual Entry";
@@ -79,6 +84,7 @@ namespace Version1.Controllers
         }
         public ActionResult cppsixHDGR()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Manual Entry >> CPP 600 DGR Manual Entry";
@@ -89,6 +95,12 @@ namespace Version1.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+        }
+        public void CheckCache()
+        {
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
         }
     }
 }

@@ -9,8 +9,10 @@ namespace Version1.Controllers
     public class KpisController : Controller
     {
         // GET: Kpis
+        HomeController home = new HomeController();
         public ActionResult Index()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
 
@@ -26,6 +28,7 @@ namespace Version1.Controllers
 
         public ActionResult OverallPlant()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "KPIs >> Overall Plant";
@@ -40,6 +43,7 @@ namespace Version1.Controllers
 
         public ActionResult PlantHead()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "KPIs >> Plant Head";
@@ -54,6 +58,7 @@ namespace Version1.Controllers
 
         public ActionResult Cop()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "KPIs >> COP";
@@ -68,6 +73,7 @@ namespace Version1.Controllers
 
         public ActionResult CopBreakup()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "KPIs >> COP";
@@ -78,6 +84,12 @@ namespace Version1.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+        }
+        public void CheckCache()
+        {
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
         }
     }
 }

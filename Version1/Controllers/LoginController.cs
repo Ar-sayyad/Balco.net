@@ -11,6 +11,7 @@ namespace Version1.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 return Redirect("Home");
@@ -45,9 +46,15 @@ namespace Version1.Controllers
 
         public ActionResult Logout()
         {
+            Session.Abandon();
             Session.Clear();
-
             return RedirectToAction("Index", "Login");
+        }
+        public void CheckCache()
+        {
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
         }
 
     }

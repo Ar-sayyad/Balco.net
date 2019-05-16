@@ -11,6 +11,7 @@ namespace Version1.Controllers
         // GET: Screens
         public ActionResult Index()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> Overall Plant";
@@ -24,6 +25,7 @@ namespace Version1.Controllers
         }
         public ActionResult OverallPlant()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> Overall Plant";
@@ -38,6 +40,7 @@ namespace Version1.Controllers
         /******540MW Unit #1***********/
         public ActionResult OnefftBoiler()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #1 > Boiler";
@@ -51,6 +54,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnefftTurbine()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #1 > Turbine";
@@ -64,6 +68,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnefftCondenser()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #1 > Condenser";
@@ -77,6 +82,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnefftAirpreHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #1 > Air PreHeater";
@@ -90,6 +96,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnefftHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #1 > HP Heater";
@@ -103,6 +110,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnefftLPHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #1 > LP Heater";
@@ -116,6 +124,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnefftPerformance()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #1 > BFPs";
@@ -132,6 +141,7 @@ namespace Version1.Controllers
 
         public ActionResult TwofftBoiler()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #2 > Boiler";
@@ -145,6 +155,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwofftTurbine()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #2 > Turbine";
@@ -158,6 +169,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwofftCondenser()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #2 > Condenser";
@@ -171,6 +183,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwofftAirpreHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #2 > Air PreHeater";
@@ -184,6 +197,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwofftHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #2 > HP Heater";
@@ -197,6 +211,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwofftLPHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #2 > LP Heater";
@@ -210,6 +225,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwofftPerformance()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #2 > BFPs";
@@ -225,6 +241,7 @@ namespace Version1.Controllers
         /******540MW Unit #3***********/
         public ActionResult ThreefftBoiler()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #3 > Boiler";
@@ -238,6 +255,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreefftTurbine()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #3 > Turbine";
@@ -251,6 +269,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreefftCondenser()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #3 > Condenser";
@@ -264,6 +283,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreefftAirpreHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #3 > Air PreHeater";
@@ -277,6 +297,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreefftHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #3 > HP Heater";
@@ -290,6 +311,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreefftLPHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #3 > LP Heater";
@@ -303,6 +325,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreefftPerformance()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #3 > BFPs";
@@ -318,6 +341,7 @@ namespace Version1.Controllers
         /******540MW Unit #4***********/
         public ActionResult FourfftBoiler()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #4 > Boiler";
@@ -331,6 +355,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourfftTurbine()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #4 > Turbine";
@@ -344,6 +369,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourfftCondenser()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #4 > Condenser";
@@ -357,6 +383,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourfftAirpreHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #4 > Air preHeater";
@@ -370,6 +397,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourfftHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #4 > HP Heater";
@@ -383,6 +411,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourfftLPHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #4 > LP Heater";
@@ -396,6 +425,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourfftPerformance()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 540 MW > Unit #4 > BFPs";
@@ -414,6 +444,7 @@ namespace Version1.Controllers
         /******1200MW Unit #1***********/
         public ActionResult OnetwhBoiler()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #1 > Boiler";
@@ -427,6 +458,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnetwhTurbine()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #1 > Turbine";
@@ -440,6 +472,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnetwhCondenser()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #1 > Condenser";
@@ -453,6 +486,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnetwhAirpreHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #1 > Air preHeater";
@@ -466,6 +500,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnetwhHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #1 > HP Heater";
@@ -479,6 +514,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnetwhLPHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #1 > LP Heater";
@@ -492,6 +528,7 @@ namespace Version1.Controllers
         }
         public ActionResult OnetwhPerformance()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #1 > BFPs";
@@ -506,6 +543,7 @@ namespace Version1.Controllers
         /******1200MW Unit #2***********/
         public ActionResult TwotwhBoiler()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #2 > Boiler";
@@ -519,6 +557,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwotwhTurbine()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #2 > Turbine";
@@ -532,6 +571,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwotwhCondenser()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #2 > Condenser";
@@ -545,6 +585,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwotwhAirpreHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #2 > Air preHeater";
@@ -558,6 +599,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwotwhHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #2 > HP Heater";
@@ -571,6 +613,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwotwhLPHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #2 > LP Heater";
@@ -584,6 +627,7 @@ namespace Version1.Controllers
         }
         public ActionResult TwotwhPerformance()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #2 > BFPs";
@@ -599,6 +643,7 @@ namespace Version1.Controllers
         /******1200MW Unit #3***********/
         public ActionResult ThreetwhBoiler()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #3 > Boiler";
@@ -612,6 +657,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreetwhTurbine()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #3 > Turbine";
@@ -625,6 +671,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreetwhCondenser()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #3 > Condenser";
@@ -638,6 +685,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreetwhAirpreHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #3 > Air preHeater";
@@ -651,6 +699,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreetwhHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #3 > HP Heater";
@@ -664,6 +713,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreetwhLPHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #3 > LP Heater";
@@ -677,6 +727,7 @@ namespace Version1.Controllers
         }
         public ActionResult ThreetwhPerformance()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #3 > BFPs";
@@ -692,6 +743,7 @@ namespace Version1.Controllers
         /******1200MW Unit #4***********/
         public ActionResult FourtwhBoiler()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #4 > Boiler";
@@ -705,6 +757,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourtwhTurbine()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #4 > Turbine";
@@ -718,6 +771,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourtwhCondenser()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #4 > Condenser";
@@ -731,6 +785,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourtwhAirpreHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #4 > Air preHeater";
@@ -744,6 +799,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourtwhHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #4 > HP Heater";
@@ -757,6 +813,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourtwhLPHeater()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #4 > LP Heater";
@@ -770,6 +827,7 @@ namespace Version1.Controllers
         }
         public ActionResult FourtwhPerformance()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Plant Screen >> 1200 MW > Unit #4 > BFPs";
@@ -780,6 +838,12 @@ namespace Version1.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+        }
+        public void CheckCache()
+        {
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
         }
     }
 }

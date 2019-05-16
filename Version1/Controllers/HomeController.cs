@@ -10,6 +10,7 @@ namespace Version1.Controllers
     {
         public ActionResult Index()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Dashboard";
@@ -22,18 +23,11 @@ namespace Version1.Controllers
             }
         }
 
-        public ActionResult About()
+        public void CheckCache()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
         }
     }
 }

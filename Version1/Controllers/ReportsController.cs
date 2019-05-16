@@ -11,6 +11,7 @@ namespace Version1.Controllers
         // GET: Reports
         public ActionResult Index()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Reports >> Daily Perf Reports";
@@ -24,6 +25,7 @@ namespace Version1.Controllers
         }
         public ActionResult Daily()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Reports >> Daily Perf Reports";
@@ -37,6 +39,7 @@ namespace Version1.Controllers
         }
         public ActionResult RealtimePerf()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Reports >> Real-Time Perf Reports";
@@ -50,6 +53,7 @@ namespace Version1.Controllers
         }
         public ActionResult DailyGeneration() //LINK CHNAGEING FURTHER
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Reports >> Daily Generation Reports";
@@ -60,6 +64,12 @@ namespace Version1.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+        }
+        public void CheckCache()
+        {
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
         }
     }
 }

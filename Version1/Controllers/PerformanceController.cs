@@ -11,6 +11,7 @@ namespace Version1.Controllers
         // GET: Performance
         public ActionResult Index()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> Overall Plant";
@@ -24,6 +25,7 @@ namespace Version1.Controllers
         }
         public ActionResult OverallPlant()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> Overall Plant";
@@ -39,6 +41,7 @@ namespace Version1.Controllers
         /***********540MW START**************/
         public ActionResult UnitOnefft()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 540 MW > Unit #1";
@@ -54,6 +57,7 @@ namespace Version1.Controllers
         }
         public ActionResult UnitTwofft()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 540 MW > Unit #2";
@@ -69,6 +73,7 @@ namespace Version1.Controllers
         }
         public ActionResult UnitThreefft()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 540 MW > Unit #3";
@@ -84,6 +89,7 @@ namespace Version1.Controllers
         }
         public ActionResult UnitFourfft()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 540 MW > Unit #4";
@@ -99,6 +105,7 @@ namespace Version1.Controllers
         }
         public ActionResult BopDcsfft()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 540 MW > BOP";
@@ -114,6 +121,7 @@ namespace Version1.Controllers
         }
         public ActionResult Boilerfft()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 540 MW > Boiler";
@@ -129,6 +137,7 @@ namespace Version1.Controllers
         }
         public ActionResult Turbinefft()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 540 MW > Turbine";
@@ -148,6 +157,7 @@ namespace Version1.Controllers
         /***********1200MW START**************/
         public ActionResult UnitOnetwh()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 1200 MW > Unit #1";
@@ -163,6 +173,7 @@ namespace Version1.Controllers
         }
         public ActionResult UnitTwotwh()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 1200 MW > Unit #2";
@@ -178,6 +189,7 @@ namespace Version1.Controllers
         }
         public ActionResult UnitThreetwh()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 1200 MW > Unit #3";
@@ -193,6 +205,7 @@ namespace Version1.Controllers
         }
         public ActionResult UnitFourtwh()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 1200 MW > Unit #4";
@@ -208,6 +221,7 @@ namespace Version1.Controllers
         }
         public ActionResult BopDcstwh()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 1200 MW > BOP";
@@ -223,6 +237,7 @@ namespace Version1.Controllers
         }
         public ActionResult Boilertwh()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 1200 MW > Boiler";
@@ -238,6 +253,7 @@ namespace Version1.Controllers
         }
         public ActionResult Turbinetwh()
         {
+            CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Performance >> 1200 MW > Turbine";
@@ -250,6 +266,12 @@ namespace Version1.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+        }
+        public void CheckCache()
+        {
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
         }
 
         /***********1200MW END**************/
