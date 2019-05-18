@@ -121,3 +121,4 @@ C:\Users\baps\source\repos\Version1\Version1\bin\System.Memory.xml
 C:\Users\baps\source\repos\Version1\Version1\bin\System.Numerics.Vectors.xml
 C:\Users\baps\source\repos\Version1\Version1\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\baps\source\repos\Version1\Version1\bin\System.Text.Encodings.Web.xml
+C:\Users\baps\source\repos\Version1\Version1\obj\Debug\Version1.csprojAssemblyReference.cache
