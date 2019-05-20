@@ -1,13 +1,9 @@
-//var baseServiceUrl="https://bldb:4440/piwebapi/";
-//var user="cmdc";
-//var pass="system@01";
-//var afServerName="BLDB";
-//var afDatabaseName="BALCOPOWER\\VEDANTA\\BALCO\\WebPortal";
-var baseServiceUrl = "https://ecgdevserver:1706/piwebapi/";//https://192.168.1.178:1706/piwebapi/
-var user = "piwebapiuser";//"Ashif";
-var pass = "webapiuser@2019";//"Ecgit@123";
-var afServerName = "ECGDEVSERVER";//"ASHIF-DMGLBQI";//
-var afDatabaseName = "BALCOPOWER\\VEDANTA\\BALCO\\WebPortal"; //
+var baseServiceUrl="https://bldb.balco.in/piwebapi/";
+var user="cmdc";
+var pass="system@01";
+var afServerName="BLDB";
+var afDatabaseName="BALCOPOWER\\VEDANTA\\BALCO\\WebPortal";
+var baseurl = "https://bldb.balco.in:8081/";
 var enableBasicAuth=!0;
 var processJsonContent = function (url, type, data) {
 	return $.ajax({
@@ -34,27 +30,6 @@ var makeBasicAuth = function (user, password) {
 	var hash = window.btoa(tok);
 	return "Basic " + hash
 }
-
-var json = {
-    "ActivityType": "CHAT_TRANSCRIPT",
-    "SessionId": "7e9b73e3-b16b-4ba9-bc5f-d701faeb0ce5",
-    "Transcript": [ {
-        "Member": "Customer", "Timestamp": "2019-05-08 17:15:02", "Direction": "Inbound", "Message": "initial question goes here"
-    }
-    ,
-    {
-        "Member": "Customer", "Timestamp": "2019-05-08 17:15:03", "Direction": "Inbound", "Message": "Customer form input: FullName: Customer EmailAddress: stripathy@partneritsm.com PhoneNumber: 9890344229"
-    }
-    ,
-    {
-        "Member": "Demo Agent 1", "Timestamp": "2019-05-08 17:15:09", "Direction": "Outbound", "Message": "You are connected."
-    }
-    ,
-    {
-        "Member": "Customer", "Timestamp": "2019-05-08 17:15:15", "Direction": "Inbound", "Message": "need help with passwords "
-    }
-    ]
-};
 
 
 var cpp540coalAnalysis=[
@@ -354,47 +329,47 @@ var cpp540DGR=[
                 "parameter":"TOT_EXPORT_CTU.MAN",
                 "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
                 "path":"path={0}|TOT_EXPORT_CTU.MAN"
-           },
-           {
-                "title":"Coal Consumption",
-                 "sr":23,
-                "UOM":"MU",
-                "unitname":"other",
-                "tagname":"BALCO_CPP540_TOT_COAL_CONS.MAN",
-                "parameter":"TOT_COAL_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
-                "path":"path={0}|TOT_COAL_CONS.MAN"
-           },  
-           {
-                "title":"Total LDO Consumption",
-                 "sr":24,
-                "UOM":"kl",
-                "unitname":"other",
-                "tagname":"BALCO_CPP540_TOT_LDO_CONS.MAN",
-                "parameter":"TOT_LDO_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
-                "path":"path={0}|TOT_LDO_CONS.MAN"
-           },           
-           {
-                "title":"Total HFO Consumption",
-                 "sr":25,
-                "UOM":"kl",
-                "unitname":"other",
-                "tagname":"BALCO_CPP540_TOT_HFO_CONS.MAN",
-                "parameter":"TOT_HFO_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
-                "path":"path={0}|TOT_HFO_CONS.MAN"
-           },   
-            {
-                "title":"Raw Water Consumption",
-                 "sr":26,
-                "UOM":"m3",
-                "unitname":"other",
-                "tagname":"BALCO_CPP540_RAW_WTR_CONS.MAN",
-                "parameter":"RAW_WTR_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
-                "path":"path={0}|RAW_WTR_CONS.MAN"
-           }      
+           }
+//           {
+//                "title":"Coal Consumption",
+//                 "sr":23,
+//                "UOM":"MU",
+//                "unitname":"other",
+//                "tagname":"BALCO_CPP540_TOT_COAL_CONS.MAN",
+//                "parameter":"TOT_COAL_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
+//                "path":"path={0}|TOT_COAL_CONS.MAN"
+//           },  
+//           {
+//                "title":"Total LDO Consumption",
+//                 "sr":24,
+//                "UOM":"kl",
+//                "unitname":"other",
+//                "tagname":"BALCO_CPP540_TOT_LDO_CONS.MAN",
+//                "parameter":"TOT_LDO_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
+//                "path":"path={0}|TOT_LDO_CONS.MAN"
+//           },           
+//           {
+//                "title":"Total HFO Consumption",
+//                 "sr":25,
+//                "UOM":"kl",
+//                "unitname":"other",
+//                "tagname":"BALCO_CPP540_TOT_HFO_CONS.MAN",
+//                "parameter":"TOT_HFO_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
+//                "path":"path={0}|TOT_HFO_CONS.MAN"
+//           },   
+//            {
+//                "title":"Raw Water Consumption",
+//                 "sr":23,
+//                "UOM":"m3",
+//                "unitname":"other",
+//                "tagname":"BALCO_CPP540_RAW_WTR_CONS.MAN",
+//                "parameter":"RAW_WTR_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\CPP%20-%20540MW",
+//                "path":"path={0}|RAW_WTR_CONS.MAN"
+//           }      
            
 ];
 
@@ -972,6 +947,80 @@ var cpp600DGR=[
 ];
 /** CPP600 DGR End**/
 
+var plantHead = [
+           {
+                "sr":1,
+                "afname": "Plant Load Factor",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":2
+           },
+           {
+                "sr":2,
+                "afname": "Plant Availability Factor",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":2
+           },
+           {
+                "sr":3,
+                "afname": "Gross Generation",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":3
+           },
+           {
+                "sr":4,
+                "afname": "Aux Power Consumption",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":2
+           },
+           {
+                "sr":5,
+                "afname": "Net Generation",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":3
+           },
+           {
+                "sr":6,
+                "afname": "Gross Heat Rate",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":0
+           },
+           {
+                "sr":7,
+                "afname": "SCC",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":3
+           },
+           {
+                "sr":8,   
+                "afname": "Coal Consumption",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":0
+           },
+           {
+                "sr":9,   
+                "afname": "SOC",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":3
+           },
+           {
+                "sr":10,   
+                "afname": "Oil Consumption",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":2
+           },
+           {
+                "sr":11,   
+                "afname": "GCV",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":0
+           },
+           {
+                "sr":12,   
+                "afname": "Trippings",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":0
+           },
+];
 var kpisOverallPlant = [{
 		"afname": "PLF",
 		"div": "plantloadfactor",
