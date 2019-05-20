@@ -610,10 +610,9 @@
     <Content Include="piadmin\images\users\avatar-4.jpg" />
     <Content Include="piadmin\images\users\avatar-7.jpg" />
     <Content Include="piadmin\js\amcharts.js" />
+    <Content Include="piadmin\js\app - Copy.js" />
     <Content Include="piadmin\js\app-script.js" />
     <Content Include="piadmin\js\app.js" />
-    <Content Include="piadmin\js\app_1.js" />
-    <Content Include="piadmin\js\app_2.js" />
     <Content Include="piadmin\js\boilerPerformance.js" />
     <Content Include="piadmin\js\boilerPerformancefullcode.js" />
     <Content Include="piadmin\js\bootstrap-datetimepicker.min.js" />

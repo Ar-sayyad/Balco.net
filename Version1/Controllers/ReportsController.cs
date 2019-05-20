@@ -15,7 +15,7 @@ namespace Version1.Controllers
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Reports >> Daily Perf Reports";
-                ViewData["path"] = "https://bldb:8090/ReportServer_SSRS/Pages/ReportViewer.aspx?%2fBalco_Power_Report%2fPerformanceReport&rs:Embed=true";
+                ViewData["path"] = "https://bldb.balco.in/ReportServer_SSRS/Pages/ReportViewer.aspx?%2fBalco_Power_Report%2fPerformanceReport&rs:Embed=true";
                 return View();
             }
             else
@@ -29,7 +29,7 @@ namespace Version1.Controllers
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Reports >> Daily Perf Reports";
-                ViewData["path"] = "https://bldb:8090/ReportServer_SSRS/Pages/ReportViewer.aspx?%2fBalco_Power_Report%2fPerformanceReport&rs:Embed=true";
+                ViewData["path"] = "https://bldb.balco.in/ReportServer_SSRS/Pages/ReportViewer.aspx?%2fBalco_Power_Report%2fPerformanceReport&rs:Embed=true";
                 return View("Index");
             }
             else
@@ -43,7 +43,7 @@ namespace Version1.Controllers
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Reports >> Real-Time Perf Reports";
-                ViewData["path"] = "https://bldb:8090/ReportServer_SSRS/Pages/ReportViewer.aspx?%2fBalco_Power_Report%2fPerformanceReportSnapshot&rs:Embed=true";
+                ViewData["path"] = "https://bldb.balco.in/ReportServer_SSRS/Pages/ReportViewer.aspx?%2fBalco_Power_Report%2fPerformanceReportSnapshot&rs:Embed=true";
                 return View("Index");
             }
             else
@@ -57,7 +57,7 @@ namespace Version1.Controllers
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "Reports >> Daily Generation Reports";
-                ViewData["path"] = "https://bldb:8090/ReportServer_SSRS/Pages/ReportViewer.aspx?%2fBalco_Power_Report%2fPerformanceReportSnapshot&rs:Embed=true";
+                ViewData["path"] = "https://bldb.balco.in/ReportServer_SSRS/Pages/ReportViewer.aspx?%2fBalco_Power_Report%2fPerformanceReportSnapshot&rs:Embed=true";
                 return View("Index");
             }
             else
