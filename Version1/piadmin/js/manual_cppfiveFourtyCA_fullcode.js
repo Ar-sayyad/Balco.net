@@ -148,18 +148,15 @@ function saveValue(Id, WebId, Value) {
     var postData = JSON.stringify(data);
     var postAjaxEF = processJsonContent(url, 'POST', postData, null, null);
     $.when(postAjaxEF).fail(function () {
-        //errormsg("Cannot Post The Data.");
         $(".status" + Id).html("<span style='color:red;font-weight:500;font-size: 18px;'><i class='fa fa-times-circle'></i> Failed.</span>");
     });
     $.when(postAjaxEF).done(function () {
         var response = (JSON.stringify(postAjaxEF.responseText));
         if (response == '""') {
-            //successmsg("Data Updated successfully.");
             $(".status" + Id).html("<span style='color:green;font-weight:500;font-size: 18px;'><i class='fa fa-check-circle'></i> Success.</span>");
         } else {
             var failure = postAjaxEF.responseJSON.Items;
             $.each(failure, function (key) {
-                // warningmsg("Status: " + failure[key].Substatus + " <br> Message: " + failure[key].Message);
                 $(".status" + Id).html("<span style='color:red;font-weight:500;font-size: 18px;'><i class='fa fa-times-circle'></i> Failed.</span>");
             })
         }

@@ -1,9 +1,9 @@
-$("#sendToPi").click(function() {
+$("#sendToPi").click(function () {
     var time = $("#time").val();
     if (time === '') {
         warningmsg("Time Selection Required..!")
     } else {
-        $.each($(".WebId"), function() {
+        $.each($(".WebId"), function () {
             var Value = $(this).val();
             var Id = $(this).attr("data-Id");
             var WebId = $(this).attr("data-WebId");
@@ -12,19 +12,19 @@ $("#sendToPi").click(function() {
         })
     }
 });
- $("#editTime").click(function() {
-  $("#time").removeAttr("readonly");
-  $("#sendToPi").attr('disabled', true); 
-  $('input[type="time"][name="time"]').attr({
-   'value': '05:00:00'
-  });
- });
- $("#saveTime").click(function() {
-  $("#time").attr('readonly', true); 
-  $("#sendToPi").removeAttr('disabled');  
- });
-$("#refresh").click(function() {
-    $.each($(".WebId"), function() {
+$("#editTime").click(function () {
+    $("#time").removeAttr("readonly");
+    $("#sendToPi").attr('disabled', true);
+    $('input[type="time"][name="time"]').attr({
+        'value': '05:00:00'
+    });
+});
+$("#saveTime").click(function () {
+    $("#time").attr('readonly', true);
+    $("#sendToPi").removeAttr('disabled');
+});
+$("#refresh").click(function () {
+    $.each($(".WebId"), function () {
         var Id = $(this).attr("data-Id");
         $(this).val(0);
         $(".status" + Id).html('')
@@ -47,7 +47,7 @@ function sort_table(tbodyId) {
             arr[i][j] = cells[j].innerHTML
         }
     }
-    arr.sort(function(a, b) {
+    arr.sort(function (a, b) {
         var first = parseInt(a[col]);
         var second = parseInt(b[col]);
         return (first == second) ? 0 : ((first > second) ? asc : -1 * asc)
@@ -57,7 +57,7 @@ function sort_table(tbodyId) {
     }
 }
 var now = new Date();
-$(function() {
+$(function () {
     var month = (now.getMonth() + 1);
     var day = now.getDate();
     if (month < 10)
@@ -71,7 +71,7 @@ $(function() {
         maxDate: '0'
     })
 });
-$(function() {
+$(function () {
     var h = now.getHours(),
         m = now.getMinutes(),
         s = now.getSeconds();
@@ -82,7 +82,7 @@ $(function() {
         'value': '05:00:00'
     })
 });
-$.each(ipp600DGR, function(key) {
+$.each(ipp600DGR, function (key) {
     var batch = {
         "database": {
             "Method": "GET",
@@ -99,10 +99,10 @@ $.each(ipp600DGR, function(key) {
     };
     var batchStr = JSON.stringify(batch, null, 2);
     var batchResult = processJsonContent(baseServiceUrl + "batch", 'POST', batchStr);
-    $.when(batchResult).fail(function() {
+    $.when(batchResult).fail(function () {
         console.log("Cannot Launch Batch!!!");
     });
-    $.when(batchResult).done(function() {
+    $.when(batchResult).done(function () {
         var valuesID = 0;
         var WebId = batchResult.responseJSON.database.Content.WebId;
         var uom = batchResult.responseJSON.database.Content.DefaultUnitsNameAbbreviation;
@@ -131,16 +131,16 @@ function saveValue(Id, WebId, Value) {
     };
     var postData = JSON.stringify(data);
     var postAjaxEF = processJsonContent(url, 'POST', postData, null, null);
-    $.when(postAjaxEF).fail(function() {
+    $.when(postAjaxEF).fail(function () {
         $(".status" + Id).html("<span style='color:red;font-weight:500;font-size: 18px;'><i class='fa fa-times-circle'></i> Failed.</span>");
     });
-    $.when(postAjaxEF).done(function() {
+    $.when(postAjaxEF).done(function () {
         var response = (JSON.stringify(postAjaxEF.responseText));
         if (response == '""') {
             $(".status" + Id).html("<span style='color:green;font-weight:500;font-size: 18px;'><i class='fa fa-check-circle'></i> Success.</span>");
         } else {
             var failure = postAjaxEF.responseJSON.Items;
-            $.each(failure, function(key) {
+            $.each(failure, function (key) {
                 $(".status" + Id).html("<span style='color:red;font-weight:500;font-size: 18px;'><i class='fa fa-times-circle'></i> Failed.</span>");
             });
         }
