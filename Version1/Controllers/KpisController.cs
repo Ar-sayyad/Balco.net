@@ -85,6 +85,20 @@ namespace Version1.Controllers
                 return RedirectToAction("Index", "Login");
             }
         }
+        public ActionResult Dashboard2()
+        {
+            CheckCache();
+            if (Session["UserType"] != null)
+            {
+                ViewData["Title"] = "KPIs >> Dashboard2";
+                ViewData["path"] = "Dashboard2";
+                return View("Dashboard2");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
         public void CheckCache()
         {
             Response.Cache.SetCacheability(HttpCacheability.NoCache);

@@ -618,6 +618,8 @@
     <Content Include="piadmin\js\bootstrap-datetimepicker.min.js" />
     <Content Include="piadmin\js\custom.min.js" />
     <Content Include="piadmin\js\dashboard.js" />
+    <Content Include="piadmin\js\dashboard2.js" />
+    <Content Include="piadmin\js\dashboard2_fullcode.js" />
     <Content Include="piadmin\js\dashboardfullcode.js" />
     <Content Include="piadmin\js\dataloader.min.js" />
     <Content Include="piadmin\js\jquery-3.3.1.js" />
@@ -866,6 +868,7 @@
     <Content Include="Views\Manual\manual_pptwelveHCA.cshtml" />
     <Content Include="Views\Manual\manual_ippsixHDGR.cshtml" />
     <Content Include="Views\Manual\manual_cppsixHDGR.cshtml" />
+    <Content Include="Views\Kpis\Dashboard2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

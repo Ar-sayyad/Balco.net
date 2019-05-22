@@ -117,7 +117,6 @@ C:\Users\baps\source\repos\Version1\Version1\bin\System.Web.WebPages.Razor.xml
 C:\Users\baps\source\repos\Version1\Version1\bin\Newtonsoft.Json.xml
 C:\Users\baps\source\repos\Version1\Version1\bin\Antlr3.Runtime.pdb
 C:\Users\baps\source\repos\Version1\Version1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.csprojAssemblyReference.cache
 C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.csproj.CoreCompileInputs.cache
 C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.csproj.CopyComplete
 C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.dll
