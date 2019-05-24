@@ -50,6 +50,8 @@
     <script src="~/piadmin/js/notifications/js/lobibox.min.js"></script>
     <script src="~/piadmin/js/notifications/js/notifications.min.js"></script>
     <script src="~/piadmin/js/notifications/js/notification-custom-script.js"></script>
+
+    <script src="~/piadmin/js/jquery.PrintArea.js"></script>
 </head>
 <body class="fix-header fix-sidebar">
     <div class="preloader">
@@ -62,7 +64,7 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <!-- Logo -->
                 <div class="navbar-header">
-                    <a  href="~/" asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                    <a href="~/" asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
                         <span>
                             <img style="width:150px;" src="~/piadmin/images/logo-text.png" alt="homepage" class="dark-logo" />
                         </span>
@@ -118,7 +120,7 @@
                                     </span>
                                 </a>
                                 <ul aria-expanded="false" class="collapse">
-                                    <li><a href="~/kpis/dashboard2"><i class="fa fa-dashboard"></i> Dashboard 2 </a></li>
+                                    <li><a href="~/kpis/dashboard2"><i class="fa fa-dashboard"></i> Plant Summary </a></li>
                                     <li><a href="~/kpis/overallPlant"><i class="fa fa-bar-chart"></i> Overall Plant </a></li>
                                     <li><a href="~/kpis/plantHead"><i class="fa fa-table"></i> Plant Head</a></li>
                                     <li><a href="~/kpis/cop"><i class="fa fa-bar-chart"></i> COP </a></li>
@@ -397,7 +399,7 @@
                             <li class="nav-devider"></li>
                             <li class="nav-label">Dashboard</li>
                             <li><a href="~/"><i class="fa fa-home"></i> Home </a></li>
-                            <li><a href="~/kpis/dashboard2"><i class="fa fa-dashboard"></i> Dashboard 2 </a></li>
+                            <li><a href="~/kpis/dashboard2"><i class="fa fa-dashboard"></i> Plant Summary </a></li>
                             <li><a href="~/kpis/plantHead"><i class="fa fa-table"></i>KPIS Plant Head</a></li>
                             <li class="nav-label">Manual Entry</li>
                             <li>
@@ -457,7 +459,7 @@
                         &COPY;  <span id="year">2018</span>
                         <script>
                             document.getElementById("year").innerHTML = new Date().getFullYear();
-                        </script> Design & Developed by <a target="_blank" href="https://www.ecgit.com/">ECGiT Private Limited</a>
+                        </script> Developed by <a target="_blank" href="https://www.ecgit.com/">ECGiT Private Limited</a>
                     </footer>
                 </center>
             </div>

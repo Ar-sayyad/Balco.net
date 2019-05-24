@@ -87,7 +87,7 @@ namespace Version1.Controllers
         }
         public ActionResult Dashboard2()
         {
-            CheckCache();
+            //CheckCache();
             if (Session["UserType"] != null)
             {
                 ViewData["Title"] = "KPIs >> Dashboard2";

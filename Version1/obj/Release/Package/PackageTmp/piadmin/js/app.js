@@ -952,74 +952,86 @@ var plantHead = [
                 "sr":1,
                 "afname": "Plant Load Factor",
                 "path": "path={0}|ACT&path={0}|BP",
-                "digits":2
+                "digits":1
            },
            {
                 "sr":2,
                 "afname": "Plant Availability Factor",
                 "path": "path={0}|ACT&path={0}|BP",
-                "digits":2
+                "digits":1
            },
            {
                 "sr":3,
                 "afname": "Gross Generation",
                 "path": "path={0}|ACT&path={0}|BP",
-                "digits":3
-           },
+                "digits":2
+            },
+            {
+                "sr": 4,
+                "afname": "Gross Generation Avg.",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits": 1
+            },
            {
-                "sr":4,
+                "sr":5,
                 "afname": "Aux Power Consumption",
                 "path": "path={0}|ACT&path={0}|BP",
                 "digits":2
            },
            {
-                "sr":5,
+                "sr":6,
                 "afname": "Net Generation",
                 "path": "path={0}|ACT&path={0}|BP",
-                "digits":3
+                "digits":2
            },
            {
-                "sr":6,
+                "sr":7,
                 "afname": "Gross Heat Rate",
                 "path": "path={0}|ACT&path={0}|BP",
                 "digits":0
            },
            {
-                "sr":7,
+                "sr":8,
                 "afname": "SCC",
                 "path": "path={0}|ACT&path={0}|BP",
-                "digits":3
+                "digits":1
            },
            {
-                "sr":8,   
+                "sr":9,   
                 "afname": "Coal Consumption",
                 "path": "path={0}|ACT&path={0}|BP",
                 "digits":0
            },
            {
-                "sr":9,   
+                "sr":10,   
                 "afname": "SOC",
                 "path": "path={0}|ACT&path={0}|BP",
-                "digits":3
-           },
-           {
-                "sr":10,   
-                "afname": "Oil Consumption",
-                "path": "path={0}|ACT&path={0}|BP",
-                "digits":2
+                "digits":1
            },
            {
                 "sr":11,   
+                "afname": "Oil Consumption",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits":1
+           },
+           {
+                "sr":12,   
                 "afname": "GCV",
                 "path": "path={0}|ACT&path={0}|BP",
                 "digits":0
            },
            {
-                "sr":12,   
+                "sr":13,   
                 "afname": "Trippings",
                 "path": "path={0}|ACT&path={0}|BP",
                 "digits":0
-           },
+            },
+            {
+                "sr": 14,
+                "afname": "Belt Utilisation Factor",
+                "path": "path={0}|ACT&path={0}|BP",
+                "digits": 0
+            }
 ];
 var kpisOverallPlant = [{
 		"afname": "PLF",

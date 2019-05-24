@@ -265,10 +265,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 13:04:24</publishTime>
     </File>
     <File Include="bin/Version1.dll">
-      <publishTime>05/22/2019 16:40:44</publishTime>
+      <publishTime>05/24/2019 17:44:35</publishTime>
     </File>
     <File Include="bin/Version1.pdb">
-      <publishTime>05/22/2019 16:40:44</publishTime>
+      <publishTime>05/24/2019 17:44:35</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -472,7 +472,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2019 12:38:40</publishTime>
     </File>
     <File Include="piadmin/css/style.css">
-      <publishTime>05/15/2019 12:38:40</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="piadmin/icons/flag-icon-css/flag-icon.min.css">
       <publishTime>05/15/2019 12:38:40</publishTime>
@@ -1672,13 +1672,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2019 12:38:43</publishTime>
     </File>
     <File Include="piadmin/js/app - Copy.js">
-      <publishTime>05/20/2019 12:01:25</publishTime>
+      <publishTime>05/23/2019 17:05:45</publishTime>
     </File>
     <File Include="piadmin/js/app-script.js">
       <publishTime>05/15/2019 12:38:43</publishTime>
     </File>
     <File Include="piadmin/js/app.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>05/24/2019 17:45:40</publishTime>
     </File>
     <File Include="piadmin/js/app_1.js">
       <publishTime>05/15/2019 12:38:43</publishTime>
@@ -1699,13 +1699,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2019 12:38:44</publishTime>
     </File>
     <File Include="piadmin/js/dashboard.js">
-      <publishTime>05/20/2019 15:20:48</publishTime>
+      <publishTime>05/23/2019 17:06:25</publishTime>
     </File>
     <File Include="piadmin/js/dashboard2.js">
-      <publishTime>05/22/2019 16:29:51</publishTime>
+      <publishTime>05/24/2019 17:19:23</publishTime>
     </File>
     <File Include="piadmin/js/dashboard2_fullcode.js">
-      <publishTime>05/22/2019 16:29:51</publishTime>
+      <publishTime>05/24/2019 17:02:54</publishTime>
     </File>
     <File Include="piadmin/js/dashboardfullcode.js">
       <publishTime>05/20/2019 15:19:06</publishTime>
@@ -1718,6 +1718,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="piadmin/js/jquery-ui.js">
       <publishTime>05/15/2019 12:38:44</publishTime>
+    </File>
+    <File Include="piadmin/js/jquery.PrintArea.js">
+      <publishTime>05/24/2019 17:03:55</publishTime>
     </File>
     <File Include="piadmin/js/jquery.slimscroll.js">
       <publishTime>05/15/2019 12:38:44</publishTime>
@@ -2071,7 +2074,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/20/2019 15:09:35</publishTime>
     </File>
     <File Include="piadmin/js/PlantHead.js">
-      <publishTime>05/17/2019 18:14:54</publishTime>
+      <publishTime>05/24/2019 17:26:55</publishTime>
     </File>
     <File Include="piadmin/js/PlantHeadfullcode.js">
       <publishTime>05/20/2019 15:10:32</publishTime>
@@ -2164,7 +2167,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2019 14:05:45</publishTime>
     </File>
     <File Include="Views/Kpis/Dashboard2.cshtml">
-      <publishTime>05/22/2019 16:33:57</publishTime>
+      <publishTime>05/24/2019 17:43:09</publishTime>
     </File>
     <File Include="Views/Kpis/Index.cshtml">
       <publishTime>05/22/2019 16:30:54</publishTime>
@@ -2212,7 +2215,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2019 12:29:29</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/22/2019 16:40:35</publishTime>
+      <publishTime>05/24/2019 17:43:22</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>05/15/2019 12:29:29</publishTime>
@@ -2221,7 +2224,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2019 12:29:29</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/22/2019 16:40:59</publishTime>
+      <publishTime>05/24/2019 17:45:49</publishTime>
     </File>
   </ItemGroup>
 </Project>

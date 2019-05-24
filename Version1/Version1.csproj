@@ -624,6 +624,7 @@
     <Content Include="piadmin\js\dataloader.min.js" />
     <Content Include="piadmin\js\jquery-3.3.1.js" />
     <Content Include="piadmin\js\jquery-ui.js" />
+    <Content Include="piadmin\js\jquery.PrintArea.js" />
     <Content Include="piadmin\js\jquery.slimscroll.js" />
     <Content Include="piadmin\js\lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="piadmin\js\lib\bootstrap\js\popper.min.js" />
