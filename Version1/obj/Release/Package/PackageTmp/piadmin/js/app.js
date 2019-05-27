@@ -693,29 +693,29 @@ var ipp600DGR=[
            
            //Other 
            
-           {//IPP600 OTHER
-                "title":"LDO Opening Stock - as on 01st Apr 19",
-                "sr":17,
-                "UOM":"kl",
-                "unitname":"ipp600other",
-                "tagname":"BALCO_1200MW_LDO_OPENING_STOCK.MAN",
-                "parameter":"LDO_OPENING_STOCK.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW",
-                "path":"path={0}|LDO_OPENING_STOCK.MAN"
-           },         
-           {//IPP600 OTHER
-                "title":"HFO Opening Stock - as on 01st Apr 19",
-                "sr":18,
-                "UOM":"kl",
-                "unitname":"ipp600other",
-                "tagname":"BALCO_1200MW_HFO_OPENING_STOCK.MAN",
-                "parameter":"HFO_OPENING_STOCK.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW",
-                "path":"path={0}|HFO_OPENING_STOCK.MAN"
-           },           
+           //{//IPP600 OTHER
+           //     "title":"LDO Opening Stock - as on 01st Apr 19",
+           //     "sr":17,
+           //     "UOM":"kl",
+           //     "unitname":"ipp600other",
+           //     "tagname":"BALCO_1200MW_LDO_OPENING_STOCK.MAN",
+           //     "parameter":"LDO_OPENING_STOCK.MAN",
+           //     "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW",
+           //     "path":"path={0}|LDO_OPENING_STOCK.MAN"
+           //},         
+           //{//IPP600 OTHER
+           //     "title":"HFO Opening Stock - as on 01st Apr 19",
+           //     "sr":18,
+           //     "UOM":"kl",
+           //     "unitname":"ipp600other",
+           //     "tagname":"BALCO_1200MW_HFO_OPENING_STOCK.MAN",
+           //     "parameter":"HFO_OPENING_STOCK.MAN",
+           //     "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW",
+           //     "path":"path={0}|HFO_OPENING_STOCK.MAN"
+           //},           
            {//IPP600 OTHER
                 "title":"LDO Opening Stock - as on today",
-                "sr":19,
+                "sr":17,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_LDO_OPENING_STOCK_TODAY.MAN",
@@ -725,7 +725,7 @@ var ipp600DGR=[
            },  
             {//IPP600 OTHER
                 "title":"HFO Opening Stock - as on today",
-                "sr":20,
+                "sr":18,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_HFO_OPENING_STOCK_TODAY.MAN",
@@ -735,7 +735,7 @@ var ipp600DGR=[
            },           
            {//IPP600 OTHER
                 "title":"LDO # of oil tankers - as on today",
-                "sr":21,
+                "sr":19,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_LDO_TANKERS_TODAY.MAN",
@@ -745,7 +745,7 @@ var ipp600DGR=[
            },           
            {//IPP600 OTHER
                 "title":"HFO # of oil tankers - as on today",
-                "sr":22,
+                "sr":20,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_HFO_TANKERS_TODAY.MAN",
@@ -755,7 +755,7 @@ var ipp600DGR=[
            },
            {//IPP600 OTHER
                 "title":"LDO Closing Stock - as on today",
-                "sr":23,
+                "sr":21,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_LDO_CLOSING_STOCK_TODAY.MAN",
@@ -765,7 +765,7 @@ var ipp600DGR=[
            },
             {//IPP600 OTHER
                 "title":"HFO Closing Stock - as on today",
-                "sr":24,
+                "sr":22,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_HFO_CLOSING_STOCK_TODAY.MAN",

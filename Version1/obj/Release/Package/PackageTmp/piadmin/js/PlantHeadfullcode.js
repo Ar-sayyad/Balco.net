@@ -1,5 +1,20 @@
 $(document).ready(function () {
-    var t = $('#example23').DataTable();
+    $("#printBtn").click(function () {
+        var mode = 'iframe'; // popup
+        var close = mode == "popup";
+        var options = {
+            mode: mode,
+            popClose: close
+        };
+        $("div.printPage").printArea(options);
+    });
+    var t = $('#plantHead').DataTable({
+        "columnDefs": [{
+            "orderable": false,
+            "targets": 0
+        }]
+
+    });
     $.each(plantHead, function (key) {
         var rankingElements = [];
         var batch = {
