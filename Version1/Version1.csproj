@@ -610,6 +610,7 @@
     <Content Include="piadmin\images\users\avatar-4.jpg" />
     <Content Include="piadmin\images\users\avatar-7.jpg" />
     <Content Include="piadmin\js\amcharts.js" />
+    <Content Include="piadmin\js\app-minify.js" />
     <Content Include="piadmin\js\app - Copy.js" />
     <Content Include="piadmin\js\app-script.js" />
     <Content Include="piadmin\js\app.js" />

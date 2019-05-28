@@ -33,7 +33,7 @@ var makeBasicAuth = function (user, password) {
 
 
 var cpp540coalAnalysis=[
-        {
+            {
                 "title":"CPP540 Coal Analysis GCV",
                 "sr":1,
                 "UOM":"kcal/kg",

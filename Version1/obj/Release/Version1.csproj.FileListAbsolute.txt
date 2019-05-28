@@ -121,4 +121,3 @@ C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.csproj.CoreCom
 C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.csproj.CopyComplete
 C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.dll
 C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.pdb
-C:\Users\baps\source\repos\Version1\Version1\obj\Release\Version1.csprojAssemblyReference.cache
