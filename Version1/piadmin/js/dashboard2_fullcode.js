@@ -308,6 +308,8 @@ function getDashboardData() {
                             'four': attrValue
                         });
 
+
+
                     } else if (attrName1 == 'PM') {
                         elementItems1.push({
                             'PM': attrValue
@@ -320,6 +322,8 @@ function getDashboardData() {
                         elementItems1.push({
                             'SOx': attrValue
                         });
+
+
 
                     } else if (attrName1 == 'CPP540') {
                         elementItems1.push({
