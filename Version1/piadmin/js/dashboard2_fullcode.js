@@ -268,11 +268,9 @@ function getDashboardData() {
                     "UOM": UO
                 }];
                 var decimal = '';
-                $.each(cppDashboard2Analysis[key].digits, function (key1) {
-                    if (cppDashboard2Analysis[key].digits[key1].name == elementName1) {
-                        decimal = cppDashboard2Analysis[key].digits[key1].decimal;
-                    }
-                });
+                if (cppDashboard2Analysis[key].digits[0].name == elementName1) {
+                        decimal = cppDashboard2Analysis[key].digits[0].decimal;
+                    }                
                 attrItems.forEach(function (attr, attrID) {
                     var attrValue = "-";
                     if (attr !== undefined && attr.Object !== undefined) {
