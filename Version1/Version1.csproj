@@ -871,6 +871,9 @@
     <Content Include="Views\Manual\manual_ippsixHDGR.cshtml" />
     <Content Include="Views\Manual\manual_cppsixHDGR.cshtml" />
     <Content Include="Views\Kpis\Dashboard2.cshtml" />
+    <Content Include="Views\Kpis\overallStationSummary.cshtml" />
+    <Content Include="Views\Kpis\cpp540PlantSummary.cshtml" />
+    <Content Include="Views\Kpis\pp1200PlantSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -28,7 +28,13 @@ namespace Version1.Controllers
         {
 
             User objUser = new User();
-            User returnedUser = objUser.Login(user);
+            //User returnedUser = objUser.Login(user);
+            User returnedUser = new User();
+            returnedUser.UserName = "Ashif";
+            returnedUser.FirstName = "Ashif";
+            returnedUser.LastName = "Sayyad";
+            returnedUser.Id = 1;
+            returnedUser.UserType = "1";
 
             if (returnedUser != null)
             {

@@ -99,6 +99,48 @@ namespace Version1.Controllers
                 return RedirectToAction("Index", "Login");
             }
         }
+        public ActionResult overallStationSummary()
+        {
+            //CheckCache();
+            if (Session["UserType"] != null)
+            {
+                ViewData["Title"] = "KPIs >> Overall Station Summary";
+                ViewData["path"] = "Overall Station Summary";
+                return View("overallStationSummary");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
+        public ActionResult cpp540PlantSummary()
+        {
+            //CheckCache();
+            if (Session["UserType"] != null)
+            {
+                ViewData["Title"] = "KPIs >> CPP540 Plant Summary";
+                ViewData["path"] = "CPP540 Plant Summary";
+                return View("cpp540PlantSummary");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
+        public ActionResult pp1200PlantSummary()
+        {
+            //CheckCache();
+            if (Session["UserType"] != null)
+            {
+                ViewData["Title"] = "KPIs >> PP1200 Plant Summary";
+                ViewData["path"] = "PP1200 Plant Summary";
+                return View("pp1200PlantSummary");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
         public void CheckCache()
         {
             Response.Cache.SetCacheability(HttpCacheability.NoCache);

@@ -70,9 +70,12 @@
         box-shadow: 5px 5px 12px #000000;
         border: 1px solid #6257a6;
     }
+    .col-lg-3, .col-lg-4{
+        float:left
+    }
 </style>
 <div class="row printPage" id="printPage">
-    <div class="col-lg-7">
+    <div class="col-lg-6">
         <div class="card mydata">
             <div class="card-body">
                 <table id="OverallStationData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
@@ -88,7 +91,15 @@
                             <th style="width: 15% !important;">CPP900</th>
                         </tr>
                     </thead>
-                    <tbody id="sortTable"></tbody>
+                    <tbody id="sortTable">
+                        <tr role="row" class="odd"><td class="sorting_1">1. Availability</td><td>%</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">2. PLF</td><td>%</td><td>93.8</td><td>90.1</td><td>67.2</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">3. Gross Generation</td><td>MU</td><td>12.16</td><td>6.49</td><td>14.52</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">4. Aux Consumption</td><td>%</td><td>9.8</td><td>6.9</td><td>8</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">5. Gross Heatrate</td><td>kcal/kWh</td><td>2560</td><td>2436</td><td>1836</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">6. SCC</td><td>gms/kWh</td><td>652.8</td><td>563.4</td><td>516.9</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">7. SOC</td><td>ml/kWh</td><td>0</td><td><font color="red">Calc Failed</font></td><td>2.35</td></tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -97,61 +108,67 @@
                 <table id="cpp540Data" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr class="toptr">
-                            <th colspan="6" class="topth">CPP540 KPIs</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 30% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 14% !important;">UOM</th>
-                            <th style="width: 14% !important;">Unit-1</th>
-                            <th style="width: 14% !important;">Unit-2</th>
-                            <th style="width: 14% !important;">Unit-3</th>
-                            <th style="width: 14% !important;">Unit-4</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
-            </div>
-        </div>
-        <div class="card mydata">
-            <div class="card-body">
-                <table id="PowerPlant1200Data" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="6" class="topth">PP1200 KPIs</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 30% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 14% !important;">UOM</th>
-                            <th style="width: 14% !important;">Unit-1</th>
-                            <th style="width: 14% !important;">Unit-2</th>
-                            <th style="width: 14% !important;">Unit-3</th>
-                            <th style="width: 14% !important;">Unit-4</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-5">
-        <div class="card mydata marginlg">
-            <div class="card-body">
-                <table id="cpp2CEMSData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="5" class="topth">CPP540 CEMS KPIs</th>
+                            <th colspan="5" class="topth">Coal Stock & Consumption</th>
                         </tr>
                         <tr>
                             <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
                             <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">PM</th>
-                            <th style="width: 15% !important;">NOx</th>
-                            <th style="width: 15% !important;">SOx</th>
+                            <th style="width: 15% !important;">CPP540</th>
+                            <th style="width: 15% !important;">IPP300</th>
+                            <th style="width: 15% !important;">CPP900</th>
                         </tr>
                     </thead>
-                    <tbody id="sortTable"></tbody>
+                    <tbody id="sortTable">
+                        <tr><td>Coal Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>LDO Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>HFO Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>Coal Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>LDO Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>HFO Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                    <thead>
+                        <tr class="toptr"><th colspan="5" class="topth">Coal Rakes & Trucks</th></tr>
+                    </thead>
+                            <tr><td>Coal Rakes Received</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                            <tr><td>Coal Trucks Received</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                    </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card mydata marginlg">
+            <div class="card-body">
+                <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-title center">
+                        <h4>CPP540</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="PlantGenerationOverallPlant"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-title center">
+                        <h4>CPP900</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="AuxConsumptionOverallPlant"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-title center">
+                        <h4>IPP300</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="PlantGrossEfficiencyOverallPlant"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="card mydata marginlg">
             <div class="card-body">
@@ -216,4 +233,56 @@
 <div class="printdiv">
     <button type="button" id="printBtn" class="btn btn-primary  sbmt-btn"><i class="ti-printer"></i> Print</button>
 </div>
-<script src="~/piadmin/js/dashboard2.js"></script>
+<script>
+    AmCharts.makeChart('PlantGenerationOverallPlant', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 10,
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 90,
+            "radius": "70%",
+            "valueInterval": 15,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 90,
+                "color": "#ffef61",
+                "startValue": 15,
+                "endValue": 45,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 20
+        }]
+    });
+</script>
+@*<script src="~/piadmin/js/dashboard2.js"></script>*@
