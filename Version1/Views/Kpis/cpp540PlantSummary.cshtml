@@ -1,78 +1,6 @@
-﻿<style>
-    thead tr {
-        background-color: #1771ca;
-        font-size: 14px;
-    }
-
-    .table td:nth-child(1) {
-        text-align: left;
-        padding-left: 15px;
-    }
-
-    .table td {
-        font-size: 14px;
-    }
-
-    .mydata {
-        padding: 5px;
-        margin: 5px;
-        border-radius: 3px;
-        box-shadow: 5px 5px 12px rgb(158, 157, 157);
-    }
-
-    .row {
-        padding-top: 5px;
-    }
-
-    .container-fluid {
-        background-color: #919497;
-    }
-
-    .page-titles {
-        background: #ffffff;
-        margin: 0px 0 0px;
-        display: none;
-    }
-
-    .table > thead > tr > th {
-        font-weight: 600;
-    }
-
-    .col-lg-5, .col-lg-6, .col-lg-7 {
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-
-    .marginlg {
-        margin-bottom: 10px;
-    }
-
-    .toptr {
-        background-color: #e7e7e7;
-        text-align: center !important;
-    }
-
-    .topth {
-        color: #1c334b !important;
-        text-align: center !important;
-    }
-
-    .dataTables_wrapper {
-        padding-top: 0px;
-    }
-
-    .printdiv {
-        padding-bottom: 25px;
-    }
-
-    #printBtn {
-        float: right;
-        box-shadow: 5px 5px 12px #000000;
-        border: 1px solid #6257a6;
-    }
-</style>
+﻿<link href="~/piadmin/css/latest.css" rel="stylesheet" />
 <div class="row printPage" id="printPage">
-    <div class="col-lg-7">
+    <div class="col-lg-5">
         <div class="card mydata">
             <div class="card-body">
                 <table id="OverallStationData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
@@ -88,7 +16,15 @@
                             <th style="width: 15% !important;">CPP900</th>
                         </tr>
                     </thead>
-                    <tbody id="sortTable"></tbody>
+                    <tbody id="sortTable">
+                        <tr role="row" class="odd"><td class="sorting_1">1. Availability</td><td>%</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">2. PLF</td><td>%</td><td>93.8</td><td>90.1</td><td>67.2</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">3. Gross Generation</td><td>MU</td><td>12.16</td><td>6.49</td><td>14.52</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">4. Aux Consumption</td><td>%</td><td>9.8</td><td>6.9</td><td>8</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">5. Gross Heatrate</td><td>kcal/kWh</td><td>2560</td><td>2436</td><td>1836</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">6. SCC</td><td>gms/kWh</td><td>652.8</td><td>563.4</td><td>516.9</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">7. SOC</td><td>ml/kWh</td><td>0</td><td><font color="red">Calc Failed</font></td><td>2.35</td></tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -97,123 +33,828 @@
                 <table id="cpp540Data" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr class="toptr">
-                            <th colspan="6" class="topth">CPP540 KPIs</th>
+                            <th colspan="5" class="topth">Coal Stock & Consumption</th>
                         </tr>
                         <tr>
-                            <th style="width: 30% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 14% !important;">UOM</th>
-                            <th style="width: 14% !important;">Unit-1</th>
-                            <th style="width: 14% !important;">Unit-2</th>
-                            <th style="width: 14% !important;">Unit-3</th>
-                            <th style="width: 14% !important;">Unit-4</th>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 20% !important;">UOM</th>
+                            <th style="width: 15% !important;">CPP540</th>
+                            <th style="width: 15% !important;">IPP300</th>
+                            <th style="width: 15% !important;">CPP900</th>
                         </tr>
                     </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
-            </div>
-        </div>
-        <div class="card mydata">
-            <div class="card-body">
-                <table id="PowerPlant1200Data" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
+                    <tbody id="sortTable">
+                        <tr><td>Coal Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>LDO Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>HFO Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>Coal Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>LDO Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>HFO Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
                     <thead>
-                        <tr class="toptr">
-                            <th colspan="6" class="topth">PP1200 KPIs</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 30% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 14% !important;">UOM</th>
-                            <th style="width: 14% !important;">Unit-1</th>
-                            <th style="width: 14% !important;">Unit-2</th>
-                            <th style="width: 14% !important;">Unit-3</th>
-                            <th style="width: 14% !important;">Unit-4</th>
-                        </tr>
+                        <tr class="toptr"><th colspan="5" class="topth">Coal Rakes & Trucks</th></tr>
                     </thead>
-                    <tbody id="sortTable"></tbody>
+                    <tr><td>Coal Rakes Received</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                    <tr><td>Coal Trucks Received</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <div class="col-lg-5">
+    <div class="col-lg-7">
         <div class="card mydata marginlg">
-            <div class="card-body">
-                <table id="cpp2CEMSData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="5" class="topth">CPP540 CEMS KPIs</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">PM</th>
-                            <th style="width: 15% !important;">NOx</th>
-                            <th style="width: 15% !important;">SOx</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">Gross Generation</h5>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT1GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT2GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT3GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT4GG" class="viewCharts"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="card mydata marginlg">
-            <div class="card-body">
-                <table id="PP1200CEMSData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="5" class="topth">PP1200 CEMS KPIs</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">PM</th>
-                            <th style="width: 15% !important;">NOx</th>
-                            <th style="width: 15% !important;">SOx</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">PLF</h5>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT1PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT2PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT3PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT4PLF" class="pieCharts"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="card mydata marginlg">
-            <div class="card-body">
-                <table id="FuelStockConsumptionData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="5" class="topth">Fuel Stock & Consumption</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">CPP540</th>
-                            <th style="width: 15% !important;">IPP300</th>
-                            <th style="width: 15% !important;">CPP900</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">Aux Consumption</h5>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT1AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT2AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT3AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="UNIT4AUX" class="viewCharts"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card mydata marginlg">
-            <div class="card-body">
-                <table id="WaterConsumptionData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="5" class="topth">Other Parameters</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">CPP540</th>
-                            <th style="width: 15% !important;">IPP300</th>
-                            <th style="width: 15% !important;">CPP900</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
-            </div>
-        </div>
+    </div>
+</div>
+@*<div class="printdiv">
+        <button type="button" id="printBtn" class="btn btn-primary sbmt-btn"><i class="ti-printer"></i> Print</button>
+    </div>*@
+<script>
+    AmCharts.makeChart('UNIT1GG', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 55,
+            "topText": "Unit1",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 90,
+            "radius": "70%",
+            "valueInterval": 15,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 45,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 45,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 20,
+                "color": "#8BC34A",
+                "startValue": 45,
+                "endValue": 65,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 25,
+                "color": "#de4c4f",
+                "startValue": 65,
+                "endValue": 90,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 30
+        }]
+    });
 
-    </div>
-</div>
-<div class="printdiv">
-    <button type="button" id="printBtn" class="btn btn-primary  sbmt-btn"><i class="ti-printer"></i> Print</button>
-</div>
-<script src="~/piadmin/js/dashboard2.js"></script>
+    AmCharts.makeChart('UNIT2GG', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 55,
+            "topText": "CPP900",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 90,
+            "radius": "70%",
+            "valueInterval": 15,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 40,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 40,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 60,
+                "color": "#8BC34A",
+                "startValue": 40,
+                "endValue": 60,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 90,
+                "color": "#de4c4f",
+                "startValue": 60,
+                "endValue": 90,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 50
+        }]
+    });
+
+    AmCharts.makeChart('UNIT3GG', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 55,
+            "topText": "IPP300",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 1000,
+            "radius": "70%",
+            "valueInterval": 250,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 450,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 450,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 750,
+                "color": "#8BC34A",
+                "startValue": 450,
+                "endValue": 750,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 1000,
+                "color": "#de4c4f",
+                "startValue": 750,
+                "endValue": 1000,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 850
+        }]
+    });
+
+    AmCharts.makeChart('UNIT4GG', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 55,
+            "topText": "IPP300",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 1000,
+            "radius": "70%",
+            "valueInterval": 250,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 450,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 450,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 750,
+                "color": "#8BC34A",
+                "startValue": 450,
+                "endValue": 750,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 1000,
+                "color": "#de4c4f",
+                "startValue": 750,
+                "endValue": 1000,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 850
+        }]
+    });
+
+    //piecharts
+    AmCharts.makeChart('UNIT1PLF', {
+        "type": "pie",
+        "theme": "light",
+        "titles": [],
+        "dataProvider": [
+            { mw: "ULF", color: "#de4c4f", val: 91.42 },
+            { mw: "Losses", color: "#0D52D1", val: 16.74 }
+        ],
+        "balloon": {
+            "drop": true, //"cornerRadius": 5,
+            "adjustBorderColor": false,
+            "color": "#ffffff",
+            "fixedPosition": true,
+            "fontSize": 9
+        },
+        "valueField": "val",
+        "titleField": "mw",
+        "colorField": "color",
+        "balloon": {
+            "fixedPosition": false
+        },
+        "adjustBorderColor": false, //"startEffect": "elastic",
+        "startDuration": 0,
+        "labelsEnabled": false,
+        "labelRadius": 5,
+        "pullOutRadius": 15,
+        "outlineColor": "",
+        "innerRadius": "60%",
+        "depth3D": 3,
+        "balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>",
+        "angle": 0,
+        "export": {
+            "enabled": true
+        }
+    });
+
+    AmCharts.makeChart('UNIT2PLF', {
+        "type": "pie",
+        "theme": "light",
+        "titles": [],
+        "dataProvider": [
+            { mw: "ULF", color: "#de4c4f", val: 51.42 },
+            { mw: "Losses", color: "#0D52D1", val: 28.58 }
+        ],
+        "balloon": {
+            "drop": true, //"cornerRadius": 5,
+            "adjustBorderColor": false,
+            "color": "#ffffff",
+            "fixedPosition": true,
+            "fontSize": 9
+        },
+        "valueField": "val",
+        "titleField": "mw",
+        "colorField": "color",
+        "balloon": {
+            "fixedPosition": false
+        },
+        "adjustBorderColor": false, //"startEffect": "elastic",
+        "startDuration": 0,
+        "labelsEnabled": false,
+        "labelRadius": 5,
+        "pullOutRadius": 15,
+        "outlineColor": "",
+        "innerRadius": "60%",
+        "depth3D": 3,
+        "balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>",
+        "angle": 0,
+        "export": {
+            "enabled": true
+        }
+    });
+
+    AmCharts.makeChart('UNIT3PLF', {
+        "type": "pie",
+        "theme": "light",
+        "titles": [],
+        "dataProvider": [
+            { mw: "ULF", color: "#de4c4f", val: 21.42 },
+            { mw: "Losses", color: "#0D52D1", val: 19.58 }
+        ],
+        "balloon": {
+            "drop": true, //"cornerRadius": 5,
+            "adjustBorderColor": false,
+            "color": "#ffffff",
+            "fixedPosition": true,
+            "fontSize": 9
+        },
+        "valueField": "val",
+        "titleField": "mw",
+        "colorField": "color",
+        "balloon": {
+            "fixedPosition": false
+        },
+        "adjustBorderColor": false, //"startEffect": "elastic",
+        "startDuration": 0,
+        "labelsEnabled": false,
+        "labelRadius": 5,
+        "pullOutRadius": 15,
+        "outlineColor": "",
+        "innerRadius": "60%",
+        "depth3D": 3,
+        "balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>",
+        "angle": 0,
+        "export": {
+            "enabled": true
+        }
+    });
+
+    AmCharts.makeChart('UNIT4PLF', {
+        "type": "pie",
+        "theme": "light",
+        "titles": [],
+        "dataProvider": [
+            { mw: "ULF", color: "#de4c4f", val: 21.42 },
+            { mw: "Losses", color: "#0D52D1", val: 19.58 }
+        ],
+        "balloon": {
+            "drop": true, //"cornerRadius": 5,
+            "adjustBorderColor": false,
+            "color": "#ffffff",
+            "fixedPosition": true,
+            "fontSize": 9
+        },
+        "valueField": "val",
+        "titleField": "mw",
+        "colorField": "color",
+        "balloon": {
+            "fixedPosition": false
+        },
+        "adjustBorderColor": false, //"startEffect": "elastic",
+        "startDuration": 0,
+        "labelsEnabled": false,
+        "labelRadius": 5,
+        "pullOutRadius": 15,
+        "outlineColor": "",
+        "innerRadius": "60%",
+        "depth3D": 3,
+        "balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>",
+        "angle": 0,
+        "export": {
+            "enabled": true
+        }
+    });
+    //pie
+
+    AmCharts.makeChart('UNIT1AUX', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 55,
+            "topText": "CPP540",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 90,
+            "radius": "70%",
+            "valueInterval": 15,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 45,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 45,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 20,
+                "color": "#8BC34A",
+                "startValue": 45,
+                "endValue": 65,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 25,
+                "color": "#de4c4f",
+                "startValue": 65,
+                "endValue": 90,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 30
+        }]
+    });
+
+    AmCharts.makeChart('UNIT2AUX', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 55,
+            "topText": "CPP900",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 90,
+            "radius": "70%",
+            "valueInterval": 15,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 40,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 40,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 60,
+                "color": "#8BC34A",
+                "startValue": 40,
+                "endValue": 60,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 90,
+                "color": "#de4c4f",
+                "startValue": 60,
+                "endValue": 90,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 50
+        }]
+    });
+
+    AmCharts.makeChart('UNIT3AUX', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 55,
+            "topText": "IPP300",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 1000,
+            "radius": "70%",
+            "valueInterval": 250,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 450,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 450,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 750,
+                "color": "#8BC34A",
+                "startValue": 450,
+                "endValue": 750,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 1000,
+                "color": "#de4c4f",
+                "startValue": 750,
+                "endValue": 1000,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 850
+        }]
+    });
+
+    AmCharts.makeChart('UNIT4AUX', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 55,
+            "topText": "IPP300",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 1000,
+            "radius": "70%",
+            "valueInterval": 250,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 450,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 450,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 750,
+                "color": "#8BC34A",
+                "startValue": 450,
+                "endValue": 750,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+            {
+                "balloonText": 1000,
+                "color": "#de4c4f",
+                "startValue": 750,
+                "endValue": 1000,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 850
+        }]
+    });
+
+</script>
+@*<script src="~/piadmin/js/dashboard2.js"></script>*@
