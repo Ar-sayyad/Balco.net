@@ -73,6 +73,16 @@
     .col-lg-3, .col-lg-4{
         float:left
     }
+    .summaryDiv{
+        height:212px;
+    }
+    .summaryHeading{
+        text-align:center;font-weight:600;
+    }
+    .viewCharts{
+        width:100%;
+        height:200px;
+    }
 </style>
 <div class="row printPage" id="printPage">
     <div class="col-lg-6">
@@ -137,104 +147,73 @@
     </div>
     <div class="col-lg-6">
         <div class="card mydata marginlg">
-            <div class="card-body">
+            <div class="card-body summaryDiv">
+                <h4 class="summaryHeading">Gross Generation</h4>
                 <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-title center">
-                        <h4>CPP540</h4>
-                    </div>
                     <div class="card-body">
-                        <div id="PlantGenerationOverallPlant"></div>
+                        <div id="CPP540GG" class="viewCharts"></div>
+                        <h5>CPP540</h5>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-title center">
-                        <h4>CPP900</h4>
-                    </div>
+                <div class="col-lg-4">
                     <div class="card-body">
-                        <div id="AuxConsumptionOverallPlant"></div>
+                        <div id="CPP900GG" class="viewCharts"></div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-title center">
-                        <h4>IPP300</h4>
-                    </div>
+                <div class="col-lg-4">
                     <div class="card-body">
-                        <div id="PlantGrossEfficiencyOverallPlant"></div>
+                        <div id="IPP300GG" class="viewCharts"></div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
         <div class="card mydata marginlg">
-            <div class="card-body">
-                <table id="PP1200CEMSData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="5" class="topth">PP1200 CEMS KPIs</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">PM</th>
-                            <th style="width: 15% !important;">NOx</th>
-                            <th style="width: 15% !important;">SOx</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
+            <div class="card-body summaryDiv">
+                <h4 class="summaryHeading">PLF</h4>
+                <div class="col-lg-4">
+                    <div class="card-body"> 
+                        <div id="CPP540PLF" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP900PLF" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="IPP300PLF" class="viewCharts"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="card mydata marginlg">
-            <div class="card-body">
-                <table id="FuelStockConsumptionData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="5" class="topth">Fuel Stock & Consumption</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">CPP540</th>
-                            <th style="width: 15% !important;">IPP300</th>
-                            <th style="width: 15% !important;">CPP900</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
+            <div class="card-body summaryDiv">
+                <h4 class="summaryHeading">Aux Consumption</h4>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP540AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP900AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="IPP300AUX" class="viewCharts"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card mydata marginlg">
-            <div class="card-body">
-                <table id="WaterConsumptionData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="toptr">
-                            <th colspan="5" class="topth">Other Parameters</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">CPP540</th>
-                            <th style="width: 15% !important;">IPP300</th>
-                            <th style="width: 15% !important;">CPP900</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sortTable"></tbody>
-                </table>
-            </div>
-        </div>
-
     </div>
 </div>
 <div class="printdiv">
     <button type="button" id="printBtn" class="btn btn-primary  sbmt-btn"><i class="ti-printer"></i> Print</button>
 </div>
 <script>
-    AmCharts.makeChart('PlantGenerationOverallPlant', {
+    AmCharts.makeChart('CPP540GG', {
         "theme": "none",
         "type": "gauge",
         "rotate": true,
@@ -259,14 +238,33 @@
             "gridInside": false,
             "inside": false,
             "bands": [{
-                "balloonText": 90,
-                "color": "#ffef61",
-                "startValue": 15,
+                "balloonText": 45,
+                "color": "#03A9F4",
+                "startValue": 0,
                 "endValue": 45,
                 "innerRadius": "105%",
                 "radius": "170%",
                 "gradientRatio": [0.5, 0, -0.5]
-            }]
+            },
+                {
+                "balloonText": 20,
+                "color": "#8BC34A",
+                "startValue": 45,
+                "endValue": 65,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+                },
+                {
+                "balloonText": 25,
+                "color": "#de4c4f",
+                "startValue": 65,
+                "endValue": 90,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
         }],
         "allLabels": [],
         "balloon": {
@@ -281,7 +279,147 @@
             "nailRadius": 10,
             "color": "#cccc00",
             "radius": "160%",
-            "value": 20
+            "value": 30
+        }]
+    });
+
+    AmCharts.makeChart('CPP900GG', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 10,
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 90,
+            "radius": "70%",
+            "valueInterval": 15,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 40,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 40,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+                {
+                "balloonText": 60,
+                "color": "#8BC34A",
+                "startValue": 40,
+                "endValue": 60,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+                },
+                {
+                "balloonText": 90,
+                "color": "#de4c4f",
+                "startValue": 60,
+                "endValue": 90,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 50
+        }]
+    });
+
+    AmCharts.makeChart('IPP300GG', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 10,
+            "topTextYOffset": 10,
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 1000,
+            "radius": "70%",
+            "valueInterval": 250,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 450,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 450,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+                {
+                "balloonText": 750,
+                "color": "#8BC34A",
+                "startValue": 450,
+                "endValue": 750,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+                },
+                {
+                "balloonText": 1000,
+                "color": "#de4c4f",
+                "startValue": 750,
+                "endValue": 1000,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 850
         }]
     });
 </script>

@@ -30,6 +30,7 @@ $.each(monthlyReceipt, function (key) {
         }
     };
     var batchStr = JSON.stringify(batch, null, 2);
+    console.log(batchStr);
     var batchResult = processJsonContent(baseServiceUrl + "batch", 'POST', batchStr);
     $.when(batchResult).fail(function () {
         console.log("Cannot Launch Batch!!!");
