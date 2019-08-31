@@ -260,6 +260,7 @@
     <Content Include="piadmin\css\login.css" />
     <Content Include="piadmin\css\sidebar-menu.css" />
     <Content Include="piadmin\css\spinners.css" />
+    <Content Include="piadmin\css\latest.css" />
     <Content Include="piadmin\css\style.css" />
     <Content Include="piadmin\icons\flag-icon-css\flag-icon.min.css" />
     <Content Include="piadmin\icons\flag-icon-css\flags\ad.svg" />
