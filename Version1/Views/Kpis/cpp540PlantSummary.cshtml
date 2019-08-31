@@ -19,7 +19,7 @@
                     <tbody id="sortTable">
                         <tr role="row" class="odd"><td class="sorting_1">1. Availability</td><td>%</td><td>100</td><td>100</td><td>73.6</td></tr>
                         <tr role="row" class="even"><td class="sorting_1">2. PLF</td><td>%</td><td>93.8</td><td>90.1</td><td>67.2</td></tr>
-                        <tr role="row" class="odd"><td class="sorting_1">3. Gross Generation</td><td>MU</td><td>12.16</td><td>6.49</td><td>14.52</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">3. Gross Generation</td><td>MW</td><td>12.16</td><td>6.49</td><td>14.52</td></tr>
                         <tr role="row" class="even"><td class="sorting_1">4. Aux Consumption</td><td>%</td><td>9.8</td><td>6.9</td><td>8</td></tr>
                         <tr role="row" class="odd"><td class="sorting_1">5. Gross Heatrate</td><td>kcal/kWh</td><td>2560</td><td>2436</td><td>1836</td></tr>
                         <tr role="row" class="even"><td class="sorting_1">6. SCC</td><td>gms/kWh</td><td>652.8</td><td>563.4</td><td>516.9</td></tr>
@@ -33,28 +33,46 @@
                 <table id="cpp540Data" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr class="toptr">
-                            <th colspan="5" class="topth">Coal Stock & Consumption</th>
+                            <th colspan="6" class="topth">KPI's - CEMS</th>
                         </tr>
                         <tr>
                             <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
-                            <th style="width: 20% !important;">UOM</th>
-                            <th style="width: 15% !important;">CPP540</th>
-                            <th style="width: 15% !important;">IPP300</th>
-                            <th style="width: 15% !important;">CPP900</th>
+                            <th style="width: 13% !important;">UOM</th>
+                            <th style="width: 13% !important;">Unit1</th>
+                            <th style="width: 13% !important;">Unit2</th>
+                            <th style="width: 13% !important;">Unit3</th>
+                            <th style="width: 13% !important;">Unit4</th>
                         </tr>
                     </thead>
                     <tbody id="sortTable">
-                        <tr><td>Coal Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
-                        <tr><td>LDO Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
-                        <tr><td>HFO Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
-                        <tr><td>Coal Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
-                        <tr><td>LDO Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
-                        <tr><td>HFO Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>PM</td><td>ppm</td><td>100</td><td>100</td><td>73.6</td><td>73.6</td></tr>
+                        <tr><td>NOx</td><td>ppm</td><td>100</td><td>100</td><td>73.6</td><td>73.6</td></tr>
+                        <tr><td>SOx</td><td>ppm</td><td>100</td><td>100</td><td>73.6</td><td>73.6</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card mydata">
+            <div class="card-body">
+                <table id="cpp540Data" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
-                        <tr class="toptr"><th colspan="5" class="topth">Coal Rakes & Trucks</th></tr>
+                        <tr class="toptr">
+                            <th colspan="6" class="topth">KPI's Plant Performance</th>
+                        </tr>
+                        <tr>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 13% !important;">UOM</th>
+                            <th style="width: 13% !important;">Unit1</th>
+                            <th style="width: 13% !important;">Unit2</th>
+                            <th style="width: 13% !important;">Unit3</th>
+                            <th style="width: 13% !important;">Unit4</th>
+                        </tr>
                     </thead>
-                    <tr><td>Coal Rakes Received</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
-                    <tr><td>Coal Trucks Received</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                    <tbody id="sortTable">
+                        <tr><td>Boiler Efficiency</td><td>%</td><td>100</td><td>100</td><td>73.6</td><td>73.6</td></tr>
+                        <tr><td>STG Gross Heatrate</td><td>kcal/kWh</td><td>100</td><td>100</td><td>73.6</td><td>73.6</td></tr>
+                        <tr><td>TrippingS (MTD)</td><td>-</td><td>100</td><td>100</td><td>73.6</td><td>73.6</td></tr>
+                        <tr><td>Trippings (YTD)</td><td>-</td><td>100</td><td>100</td><td>73.6</td><td>73.6</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -221,7 +239,7 @@
         "axes": [{
             "topTextFontSize": 10,
             "topTextYOffset": 55,
-            "topText": "CPP900",
+            "topText": "Unit2",
             "topTextColor": "#0288c5",
             "color": "#ffef61",
             "fontSize": 12,
@@ -292,7 +310,7 @@
         "axes": [{
             "topTextFontSize": 10,
             "topTextYOffset": 55,
-            "topText": "IPP300",
+            "topText": "Unit3",
             "topTextColor": "#0288c5",
             "color": "#ffef61",
             "fontSize": 12,
@@ -363,7 +381,7 @@
         "axes": [{
             "topTextFontSize": 10,
             "topTextYOffset": 55,
-            "topText": "IPP300",
+            "topText": "Unit4",
             "topTextColor": "#0288c5",
             "color": "#ffef61",
             "fontSize": 12,
@@ -580,7 +598,7 @@
         "axes": [{
             "topTextFontSize": 10,
             "topTextYOffset": 55,
-            "topText": "CPP540",
+            "topText": "Unit1",
             "topTextColor": "#0288c5",
             "color": "#ffef61",
             "fontSize": 12,
@@ -651,7 +669,7 @@
         "axes": [{
             "topTextFontSize": 10,
             "topTextYOffset": 55,
-            "topText": "CPP900",
+            "topText": "Unit2",
             "topTextColor": "#0288c5",
             "color": "#ffef61",
             "fontSize": 12,
@@ -722,7 +740,7 @@
         "axes": [{
             "topTextFontSize": 10,
             "topTextYOffset": 55,
-            "topText": "IPP300",
+            "topText": "Unit3",
             "topTextColor": "#0288c5",
             "color": "#ffef61",
             "fontSize": 12,
@@ -793,7 +811,7 @@
         "axes": [{
             "topTextFontSize": 10,
             "topTextYOffset": 55,
-            "topText": "IPP300",
+            "topText": "Unit4",
             "topTextColor": "#0288c5",
             "color": "#ffef61",
             "fontSize": 12,
