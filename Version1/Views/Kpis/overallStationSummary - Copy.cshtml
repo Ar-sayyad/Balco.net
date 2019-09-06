@@ -1,0 +1,862 @@
+﻿<link href="~/piadmin/css/latest.css" rel="stylesheet" />
+<div class="row printPage" id="printPage">
+    <div class="col-lg-5">
+        <div class="card mydata">
+            <div class="card-body">
+                <table id="OverallStationData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr class="toptr">
+                            <th colspan="5" class="topth">Overall Station KPIs</th>
+                        </tr>
+                        <tr>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 20% !important;">UOM</th>
+                            <th style="width: 15% !important;">CPP540</th>
+                            <th style="width: 15% !important;">IPP300</th>
+                            <th style="width: 15% !important;">CPP900</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortTable">
+                        <tr role="row" class="odd"><td class="sorting_1">1. Availability</td><td>%</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">2. PLF</td><td>%</td><td>93.8</td><td>90.1</td><td>67.2</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">3. Gross Generation</td><td>MU</td><td>12.16</td><td>6.49</td><td>14.52</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">4. Aux Consumption</td><td>%</td><td>9.8</td><td>6.9</td><td>8</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">5. Gross Heatrate</td><td>kcal/kWh</td><td>2560</td><td>2436</td><td>1836</td></tr>
+                        <tr role="row" class="even"><td class="sorting_1">6. SCC</td><td>gms/kWh</td><td>652.8</td><td>563.4</td><td>516.9</td></tr>
+                        <tr role="row" class="odd"><td class="sorting_1">7. SOC</td><td>ml/kWh</td><td>0</td><td><font color="red">Calc Failed</font></td><td>2.35</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card mydata">
+            <div class="card-body">
+                <table id="cpp540Data" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr class="toptr">
+                            <th colspan="5" class="topth">Coal Stock & Consumption</th>
+                        </tr>
+                        <tr>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 20% !important;">UOM</th>
+                            <th style="width: 15% !important;">CPP540</th>
+                            <th style="width: 15% !important;">IPP300</th>
+                            <th style="width: 15% !important;">CPP900</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortTable">
+                        <tr><td>Coal Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>LDO Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>HFO Consumption</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>Coal Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>LDO Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                        <tr><td>HFO Cls Stock</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                    <thead>
+                        <tr class="toptr"><th colspan="5" class="topth">Coal Rakes & Trucks</th></tr>
+                    </thead>
+                            <tr><td>Coal Rakes Received</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                            <tr><td>Coal Trucks Received</td><td>kT</td><td>100</td><td>100</td><td>73.6</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7">
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">Gross Generation</h5>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP540GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP900GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="IPP300GG" class="viewCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">PLF</h5>
+                <div class="col-lg-4">
+                    <div class="card-body"> 
+                        <div id="CPP540PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP900PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="IPP300PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">Aux Consumption</h5>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP540AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP900AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="IPP300AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="printdiv">
+    <button type="button" id="printBtn" class="btn btn-primary sbmt-btn"><i class="ti-printer"></i> Print</button>
+</div>*@
+<script>
+
+var plantSummaryPerformance = [{
+		"afname": "CPP540",
+		"div": "CPP540",
+		"title": "CPP540",
+		"theme": "light",
+		"type": "gauge",
+		"path": "path={0}|color&path={0}|StartValue&path={0}|endValue&path={0}|Realtime_MW"
+	},
+	{
+		"afname": "CPP900",
+		"div": "CPP900",
+		"title": "CPP900",
+		"theme": "light",
+		"type": "gauge",
+		"path": "path={0}|color&path={0}|StartValue&path={0}|endValue&path={0}|Realtime_MW"
+	},
+	{
+		"afname": "IPP300",
+		"div": "IPP300",
+		"title": "IPP300",
+		"theme": "light",
+		"type": "gauge",
+		"path": "path={0}|color&path={0}|StartValue&path={0}|endValue&path={0}|Realtime_MW"
+	}
+
+];
+    var summaryPerformance = [
+    {
+            "afname": "Gross Generation",
+            "div": "GG"
+	},
+	{
+        "afname": "Aux Consumption",
+        "div": "AUX"
+	}
+];
+
+
+    $.each(summaryPerformance, function (key1) {
+    $.each(plantSummaryPerformance, function (key) {
+        $('#' + plantSummaryPerformance[key].div + summaryPerformance[key1].div).html("<img style='margin-top:20%;margin-left:40%;width:75px;height:75px;' src='../piadmin/images/loading.gif'>");
+        var rankingElements = [];
+        var batch = {
+            "database": {
+                "Method": "GET",
+                "Resource": baseServiceUrl + "elements?path=\\\\" + afServerName + "\\" + afDatabaseName + "\\KPIs\\Summary\\Overall Station Summary\\Charts\\" + summaryPerformance[key1].afname + "\\" + plantSummaryPerformance[key].afname + "&selectedFields=WebId;Links.Elements"
+            },
+            "elements": {
+                "Method": "GET",
+                "Resource": "{0}?selectedFields=Items.Name;Items.Path;&searchFullHierarchy=true",
+                "ParentIds": [
+                    "database"
+                ],
+                "Parameters": [
+                    "$.database.Content.Links.Elements"
+                ]
+            },
+            "attributes": {
+                "Method": "GET",
+                "RequestTemplate": {
+                    "Resource": baseServiceUrl + "attributes/multiple?selectedFields=Items.Object.Name;Items.Object.Path;Items.Object.WebId&" + plantSummaryPerformance[key].path
+                },
+                "ParentIds": [
+                    "elements"
+                ],
+                "Parameters": [
+                    "$.elements.Content.Items[*].Path"
+                ]
+            },
+            "values": {
+                "Method": "GET",
+                "RequestTemplate": {
+                    "Resource": baseServiceUrl + "streams/{0}/value"
+                },
+                "ParentIds": [
+                    "attributes"
+                ],
+                "Parameters": [
+                    "$.attributes.Content.Items[*].Content.Items[*].Object.WebId"
+                ]
+            }
+        };
+
+        var batchStr = JSON.stringify(batch, null, 2);
+        console.log(batchStr);
+        var batchResult = processJsonContent(baseServiceUrl + "batch", 'POST', batchStr);
+        $.when(batchResult).fail(function () {
+            warningmsg("Cannot Launch Batch!!!");
+        });
+        $.when(batchResult).done(function () {
+            var batchResultItems = (batchResult.responseJSON.attributes.Content.Items);
+            var valuesID = 0;
+            $.each(batchResultItems, function (elementID) {
+                var attrItems = batchResultItems[elementID].Content.Items;
+                var elementName = batchResult.responseJSON.elements.Content.Items[elementID].Name;
+                var elementItems = [];
+                elementItems[0] = ({
+                    "mw": elementName
+                });
+                attrItems.forEach(function (attr, attrID) {
+                    if (attr !== undefined && attr.Object !== undefined) {
+                        attrName = attr.Object.Name;
+                        if (batchResult.responseJSON.values.Content.Items !== undefined && (batchResult.responseJSON.values.Content.Status === undefined || batchResult.responseJSON.values.Content.Status < 400) && batchResult.responseJSON.values.Content.Items[valuesID].Status === 200) {
+                            var attrV = batchResult.responseJSON.values.Content.Items[valuesID].Content.Value;
+                        }
+                    }
+                    if (attrName == 'color') {
+                        elementItems[attrID + 1] = ({
+                            'color': attrV
+                        });
+                    } else if (attrName == 'StartValue') {
+                        elementItems[attrID + 1] = ({
+                            'StartValue': attrV
+                        });
+                    } else if (attrName == 'endValue') {
+                        elementItems[attrID + 1] = ({
+                            'endValue': attrV
+                        });
+                    } else if (attrName == 'Realtime_MW') {
+                        elementItems[attrID + 1] = ({
+                            'Realtime_MW': attrV
+                        });
+                    }
+                    valuesID++;
+                });
+                rankingElements[elementID] = elementItems;
+            });
+            var marker = rankingElements[2][2].StartValue;
+            var StartValue = rankingElements[0][2].StartValue;
+            var endval = rankingElements[0][3].endValue;
+            var valueInterval = Math.round(rankingElements[0][3].endValue / 4);
+            var cols = [];
+            $.each(rankingElements, function (key1) {
+                cols.push({
+                    "balloonText": rankingElements[key1][3].endValue,
+                    "color": rankingElements[key1][1].color,
+                    "startValue": rankingElements[key1][2].StartValue,
+                    "endValue": rankingElements[key1][3].endValue,
+                    "innerRadius": "105%",
+                    "radius": "170%",
+                    "gradientRatio": [0.5, 0, -0.5]
+                });
+            });
+            console.log(cols);
+            AmCharts.makeChart(plantSummaryPerformance[key].div + summaryPerformance[key1].div, {
+                "theme": "none",
+                "type": "gauge",
+                "rotate": true,
+                "startDuration": 1,
+                "axes": [{
+                    "topTextFontSize": 12,
+                    "topTextYOffset": 60,
+                    "topText": plantSummaryPerformance[key].title,
+                    "topTextColor": "#0288c5",
+                    "color": "#ffef61",
+                    "fontSize": 12,
+                    "axisColor": "#31d6ea",
+                    "startValue": StartValue,
+                    "endValue": endval,
+                    "radius": "70%",
+                    "valueInterval": valueInterval,
+                    "tickColor": "#67b7dc",
+                    "startAngle": -90,
+                    "endAngle": 90,
+                    //"unit": "%",
+                    "bandOutlineAlpha": 0,
+                    "axisThickness": 1,
+                    "gridInside": false,
+                    "inside": false,
+                    "bands": cols
+                }],
+                "allLabels": [],
+                "balloon": {
+                    "drop": true,
+                    "adjustBorderColor": false,
+                    "color": "#FFFFFF",
+                    "fontSize": 13
+                },
+                "arrows": [{
+                    "alpha": 1,
+                    "innerRadius": "10%",
+                    "nailRadius": 10,
+                    "color": "#cccc00",
+                    "radius": "160%",
+                    "value": marker
+                }]
+            });
+
+        });
+
+    });
+});
+
+
+    //AmCharts.makeChart('CPP540GG', {
+    //    "theme": "none",
+    //    "type": "gauge",
+    //    "rotate": true,
+    //    "startDuration": 1,
+    //    "axes": [{
+    //        "topTextFontSize": 12,
+    //        "topTextYOffset": 60,            
+    //        "topText": "CPP540",
+    //        "topTextColor": "#0288c5",
+    //        "color": "#ffef61",
+    //        "fontSize": 12,
+    //        "axisColor": "#31d6ea",
+    //        "startValue": 0,
+    //        "endValue": 90,
+    //        "radius": "70%",
+    //        "valueInterval": 15,
+    //        "tickColor": "#67b7dc",
+    //        "startAngle": -90,
+    //        "endAngle": 90,
+    //        //"unit": "%",
+    //        "bandOutlineAlpha": 0,
+    //        "axisThickness": 1,
+    //        "gridInside": false,
+    //        "inside": false,
+    //        "bands": [{
+    //            "balloonText": 45,
+    //            "color": "#03A9F4",
+    //            "startValue": 0,
+    //            "endValue": 45,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //        },
+    //            {
+    //            "balloonText": 20,
+    //            "color": "#8BC34A",
+    //            "startValue": 45,
+    //            "endValue": 65,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //            },
+    //            {
+    //            "balloonText": 25,
+    //            "color": "#de4c4f",
+    //            "startValue": 65,
+    //            "endValue": 90,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //        }
+    //        ]
+    //    }],
+    //    "allLabels": [],
+    //    "balloon": {
+    //        "drop": true,
+    //        "adjustBorderColor": false,
+    //        "color": "#FFFFFF",
+    //        "fontSize": 13
+    //    },
+    //    "arrows": [{
+    //        "alpha": 1,
+    //        "innerRadius": "10%",
+    //        "nailRadius": 10,
+    //        "color": "#cccc00",
+    //        "radius": "160%",
+    //        "value": 30
+    //    }]
+    //});
+
+    //AmCharts.makeChart('CPP900GG', {
+    //    "theme": "none",
+    //    "type": "gauge",
+    //    "rotate": true,
+    //    "startDuration": 1,
+    //    "axes": [{
+    //        "topTextFontSize": 12,
+    //        "topTextYOffset": 60,
+    //        "topText": "CPP900",
+    //        "topTextColor": "#0288c5",
+    //        "color": "#ffef61",
+    //        "fontSize": 12,
+    //        "axisColor": "#31d6ea",
+    //        "startValue": 0,
+    //        "endValue": 90,
+    //        "radius": "70%",
+    //        "valueInterval": 15,
+    //        "tickColor": "#67b7dc",
+    //        "startAngle": -90,
+    //        "endAngle": 90,
+    //        //"unit": "%",
+    //        "bandOutlineAlpha": 0,
+    //        "axisThickness": 1,
+    //        "gridInside": false,
+    //        "inside": false,
+    //        "bands": [{
+    //            "balloonText": 40,
+    //            "color": "#03A9F4",
+    //            "startValue": 0,
+    //            "endValue": 40,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //        },
+    //            {
+    //            "balloonText": 60,
+    //            "color": "#8BC34A",
+    //            "startValue": 40,
+    //            "endValue": 60,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //            },
+    //            {
+    //            "balloonText": 90,
+    //            "color": "#de4c4f",
+    //            "startValue": 60,
+    //            "endValue": 90,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //        }
+    //        ]
+    //    }],
+    //    "allLabels": [],
+    //    "balloon": {
+    //        "drop": true,
+    //        "adjustBorderColor": false,
+    //        "color": "#FFFFFF",
+    //        "fontSize": 13
+    //    },
+    //    "arrows": [{
+    //        "alpha": 1,
+    //        "innerRadius": "10%",
+    //        "nailRadius": 10,
+    //        "color": "#cccc00",
+    //        "radius": "160%",
+    //        "value": 50
+    //    }]
+    //});
+
+    //AmCharts.makeChart('IPP300GG', {
+    //    "theme": "none",
+    //    "type": "gauge",
+    //    "rotate": true,
+    //    "startDuration": 1,
+    //    "axes": [{
+    //        "topTextFontSize": 12,
+    //        "topTextYOffset": 60,
+    //        "topText": "IPP300",
+    //        "topTextColor": "#0288c5",
+    //        "color": "#ffef61",
+    //        "fontSize": 12,
+    //        "axisColor": "#31d6ea",
+    //        "startValue": 0,
+    //        "endValue": 1000,
+    //        "radius": "70%",
+    //        "valueInterval": 250,
+    //        "tickColor": "#67b7dc",
+    //        "startAngle": -90,
+    //        "endAngle": 90,
+    //        //"unit": "%",
+    //        "bandOutlineAlpha": 0,
+    //        "axisThickness": 1,
+    //        "gridInside": false,
+    //        "inside": false,
+    //        "bands": [{
+    //            "balloonText": 450,
+    //            "color": "#03A9F4",
+    //            "startValue": 0,
+    //            "endValue": 450,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //        },
+    //            {
+    //            "balloonText": 750,
+    //            "color": "#8BC34A",
+    //            "startValue": 450,
+    //            "endValue": 750,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //            },
+    //            {
+    //            "balloonText": 1000,
+    //            "color": "#de4c4f",
+    //            "startValue": 750,
+    //            "endValue": 1000,
+    //            "innerRadius": "105%",
+    //            "radius": "170%",
+    //            "gradientRatio": [0.5, 0, -0.5]
+    //        }
+    //        ]
+    //    }],
+    //    "allLabels": [],
+    //    "balloon": {
+    //        "drop": true,
+    //        "adjustBorderColor": false,
+    //        "color": "#FFFFFF",
+    //        "fontSize": 13
+    //    },
+    //    "arrows": [{
+    //        "alpha": 1,
+    //        "innerRadius": "10%",
+    //        "nailRadius": 10,
+    //        "color": "#cccc00",
+    //        "radius": "160%",
+    //        "value": 850
+    //    }]
+    //});
+    
+    //piecharts
+     AmCharts.makeChart('CPP540PLF', {
+                "type": "pie",
+                "theme": "light",
+                "titles": [],
+                 "dataProvider": [
+                     { mw: "ULF", color: "#de4c4f", val: 91.42 },
+                     { mw: "Losses", color: "#0D52D1", val: 16.74 }
+                 ],
+                "balloon": {
+                    "drop": true, //"cornerRadius": 5,
+                    "adjustBorderColor": false,
+                    "color": "#ffffff",
+                    "fixedPosition": true,
+                    "fontSize": 9
+                },
+                "valueField": "val",
+                "titleField": "mw",
+                "colorField": "color",
+                "balloon": {
+                    "fixedPosition": false
+                  },
+                "adjustBorderColor": false, //"startEffect": "elastic",
+                "startDuration": 0,
+                "labelsEnabled": false,
+                "labelRadius": 5,
+                "pullOutRadius": 15,
+                "outlineColor": "",
+                "innerRadius": "65%",
+                "depth3D": 3,
+                "balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>",
+                "angle": 0,
+                "export": {
+                    "enabled": true
+                }
+     });
+
+     AmCharts.makeChart('CPP900PLF', {
+                "type": "pie",
+                "theme": "light",
+                "titles": [],
+                 "dataProvider": [
+                     { mw: "ULF", color: "#de4c4f", val: 51.42 },
+                     { mw: "Losses", color: "#0D52D1", val: 28.58 }
+                 ],
+                "balloon": {
+                    "drop": true, //"cornerRadius": 5,
+                    "adjustBorderColor": false,
+                    "color": "#ffffff",
+                    "fixedPosition": true,
+                    "fontSize": 9
+                },
+                "valueField": "val",
+                "titleField": "mw",
+                "colorField": "color",
+                "balloon": {
+                    "fixedPosition": false
+                  },
+                "adjustBorderColor": false, //"startEffect": "elastic",
+                "startDuration": 0,
+                "labelsEnabled": false,
+                "labelRadius": 5,
+                "pullOutRadius": 15,
+                "outlineColor": "",
+                "innerRadius": "65%",
+                "depth3D": 3,
+                "balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>",
+                "angle": 0,
+                "export": {
+                    "enabled": true
+                }
+     });
+
+    AmCharts.makeChart('IPP300PLF', {
+                "type": "pie",
+                "theme": "light",
+                "titles": [],
+                 "dataProvider": [
+                     { mw: "ULF", color: "#de4c4f", val: 21.42 },
+                     { mw: "Losses", color: "#0D52D1", val: 19.58 }
+                 ],
+                "balloon": {
+                    "drop": true, //"cornerRadius": 5,
+                    "adjustBorderColor": false,
+                    "color": "#ffffff",
+                    "fixedPosition": true,
+                    "fontSize": 9
+                },
+                "valueField": "val",
+                "titleField": "mw",
+                "colorField": "color",
+                "balloon": {
+                    "fixedPosition": false
+                  },
+                "adjustBorderColor": false, //"startEffect": "elastic",
+                "startDuration": 0,
+                "labelsEnabled": false,
+                "labelRadius": 5,
+                "pullOutRadius": 15,
+                "outlineColor": "",
+                "innerRadius": "65%",
+                "depth3D": 3,
+                "balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>",
+                "angle": 0,
+                "export": {
+                    "enabled": true
+                }
+    });
+    //pie
+
+    AmCharts.makeChart('CPP540AUX', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 12,
+            "topTextYOffset": 60,
+            "topText": "CPP540",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 90,
+            "radius": "70%",
+            "valueInterval": 15,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 45,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 45,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+                {
+                "balloonText": 20,
+                "color": "#8BC34A",
+                "startValue": 45,
+                "endValue": 65,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+                },
+                {
+                "balloonText": 25,
+                "color": "#de4c4f",
+                "startValue": 65,
+                "endValue": 90,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 30
+        }]
+    });
+
+    AmCharts.makeChart('CPP900AUX', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 12,
+            "topTextYOffset": 60,
+            "topText": "CPP900",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 90,
+            "radius": "70%",
+            "valueInterval": 15,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 40,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 40,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+                {
+                "balloonText": 60,
+                "color": "#8BC34A",
+                "startValue": 40,
+                "endValue": 60,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+                },
+                {
+                "balloonText": 90,
+                "color": "#de4c4f",
+                "startValue": 60,
+                "endValue": 90,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 50
+        }]
+    });
+
+    AmCharts.makeChart('IPP300AUX', {
+        "theme": "none",
+        "type": "gauge",
+        "rotate": true,
+        "startDuration": 1,
+        "axes": [{
+            "topTextFontSize": 12,
+            "topTextYOffset": 60,
+            "topText": "IPP300",
+            "topTextColor": "#0288c5",
+            "color": "#ffef61",
+            "fontSize": 12,
+            "axisColor": "#31d6ea",
+            "startValue": 0,
+            "endValue": 1000,
+            "radius": "70%",
+            "valueInterval": 250,
+            "tickColor": "#67b7dc",
+            "startAngle": -90,
+            "endAngle": 90,
+            //"unit": "%",
+            "bandOutlineAlpha": 0,
+            "axisThickness": 1,
+            "gridInside": false,
+            "inside": false,
+            "bands": [{
+                "balloonText": 450,
+                "color": "#03A9F4",
+                "startValue": 0,
+                "endValue": 450,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            },
+                {
+                "balloonText": 750,
+                "color": "#8BC34A",
+                "startValue": 450,
+                "endValue": 750,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+                },
+                {
+                "balloonText": 1000,
+                "color": "#de4c4f",
+                "startValue": 750,
+                "endValue": 1000,
+                "innerRadius": "105%",
+                "radius": "170%",
+                "gradientRatio": [0.5, 0, -0.5]
+            }
+            ]
+        }],
+        "allLabels": [],
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#FFFFFF",
+            "fontSize": 13
+        },
+        "arrows": [{
+            "alpha": 1,
+            "innerRadius": "10%",
+            "nailRadius": 10,
+            "color": "#cccc00",
+            "radius": "160%",
+            "value": 850
+        }]
+    });
+
+</script>
+@*<script src="~/piadmin/js/dashboard2.js"></script>*@

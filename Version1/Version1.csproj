@@ -618,6 +618,9 @@
     <Content Include="piadmin\js\boilerPerformance.js" />
     <Content Include="piadmin\js\boilerPerformancefullcode.js" />
     <Content Include="piadmin\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="piadmin\js\cpp540PlantSummary.js" />
+    <Content Include="piadmin\js\pp1200PlantSummary.js" />
+    <Content Include="piadmin\js\pp1200PlantSummaryfullcode.js" />
     <Content Include="piadmin\js\custom.min.js" />
     <Content Include="piadmin\js\dashboard.js" />
     <Content Include="piadmin\js\dashboard2.js" />
@@ -744,7 +747,10 @@
     <Content Include="piadmin\js\notifications\js\notifications.min.js" />
     <Content Include="piadmin\js\overallPerformance.js" />
     <Content Include="piadmin\js\overallPerformancefullcode.js" />
+    <Content Include="piadmin\js\OverallStationsummary.js" />
+    <Content Include="piadmin\js\cpp540PlantSummaryfullcode.js" />
     <Content Include="piadmin\js\PlantHead.js" />
+    <Content Include="piadmin\js\OverallStationsummaryfullcode.js" />
     <Content Include="piadmin\js\PlantHeadfullcode.js" />
     <Content Include="piadmin\js\PlantKpis.js" />
     <Content Include="piadmin\js\PlantKpisfullcode.js" />
@@ -875,6 +881,8 @@
     <Content Include="Views\Kpis\overallStationSummary.cshtml" />
     <Content Include="Views\Kpis\cpp540PlantSummary.cshtml" />
     <Content Include="Views\Kpis\pp1200PlantSummary.cshtml" />
+    <Content Include="Views\Kpis\overallStationSummary - Copy.cshtml" />
+    <Content Include="Views\Kpis\cpp540PlantSummary - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

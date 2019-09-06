@@ -27,15 +27,15 @@ namespace Version1.Controllers
         public ActionResult Index(User user)
         {
 
-            //User objUser = new User();
-           // User returnedUser = objUser.Login(user);
+            User objUser = new User();
+            User returnedUser = objUser.Login(user);
             //New Code
-            User returnedUser = new User();
-            returnedUser.UserName = "Ashif";
-            returnedUser.FirstName = "Ashif";
-            returnedUser.LastName = "Sayyad";
-            returnedUser.Id = 1;
-            returnedUser.UserType = "1";
+            //User returnedUser = new User();
+            //returnedUser.UserName = "Ashif";
+            //returnedUser.FirstName = "Ashif";
+            //returnedUser.LastName = "Sayyad";
+            //returnedUser.Id = 1;
+            //returnedUser.UserType = "1";
             //End New Code
             if (returnedUser != null)
             {
