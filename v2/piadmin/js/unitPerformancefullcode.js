@@ -69,7 +69,7 @@ $.each(performanceUnits, function (key) {
             });
         });
         if (performanceUnits[key].type === 'serial') {
-            var chart = AmCharts.makeChart(performanceUnits[key].div, {
+            AmCharts.makeChart(performanceUnits[key].div, {
                 "type": performanceUnits[key].type,
                 "theme": performanceUnits[key].theme,
                 "categoryField": "mw",
@@ -133,7 +133,7 @@ $.each(performanceUnits, function (key) {
                 }
             });
         } else {
-            var chart = AmCharts.makeChart(performanceUnits[key].div, {
+            AmCharts.makeChart(performanceUnits[key].div, {
                 "type": performanceUnits[key].type,
                 "theme": performanceUnits[key].theme,
                 "titles": [],
@@ -151,7 +151,7 @@ $.each(performanceUnits, function (key) {
                 "startDuration": 0,
                 "labelsEnabled": false,
                 "labelRadius": 5,
-                pullOutRadius: 60,
+                "pullOutRadius": 60,
                 "outlineColor": "",
                 "innerRadius": "45%",
                 "depth3D": 5,

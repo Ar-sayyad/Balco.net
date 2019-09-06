@@ -343,8 +343,8 @@ $.each(summaryPerformance, function (key1) {
                         "color": rankingElements[key1][1].color,
                         "startValue": rankingElements[key1][2].StartValue,
                         "endValue": rankingElements[key1][3].endValue,
-                        "innerRadius": "105%",
-                        "radius": "170%",
+                        "innerRadius": "100%",
+                        "radius": "165%",
                         "gradientRatio": [0.5, 0, -0.5]
                     });
                 });
@@ -356,7 +356,7 @@ $.each(summaryPerformance, function (key1) {
                     "startDuration": 1,
                     "axes": [{
                         "topTextFontSize": 12,
-                        "topTextYOffset": 60,
+                        "topTextYOffset": 5,
                         "topText": plantSummaryPerformance[key].title,
                         "topTextColor": "#0288c5",
                         "color": "#ffef61",
@@ -365,8 +365,8 @@ $.each(summaryPerformance, function (key1) {
                         "startValue": StartValue,
                         "endValue": endval,
                         "radius": "70%",
-                        "valueInterval": valueInterval,
-                        "tickColor": "#67b7dc",
+                        //"valueInterval": valueInterval,
+                        "tickColor": "#ffffff",
                         "startAngle": -90,
                         "endAngle": 90,
                         //"unit": "%",
@@ -385,10 +385,10 @@ $.each(summaryPerformance, function (key1) {
                     },
                     "arrows": [{
                         "alpha": 1,
-                        "innerRadius": "10%",
+                        "innerRadius": "20%",
                         "nailRadius": 10,
                         "color": "#cccc00",
-                        "radius": "160%",
+                        "radius": "150%",
                         "value": marker
                     }]
                 });
@@ -482,12 +482,12 @@ $.each(summaryPerformance, function (key1) {
                     "startDuration": 0,
                     "labelsEnabled": false,
                     "labelRadius": 5,
-                    "pullOutRadius": 15,
+                    "pullOutRadius": 20,
                     "outlineColor": "",
-                    "innerRadius": "65%",
-                    "depth3D": 3,
+                    "innerRadius": "55%",
+                    "depth3D": 7,
                     "balloonText": summaryPerformance[key1].balloonText,
-                    "angle": 0,
+                    "angle": 3,
                     "export": {
                         "enabled": true
                     }

@@ -1,0 +1,122 @@
+﻿<link href="~/piadmin/css/latest.css" rel="stylesheet" />
+<div class="row printPage" id="printPage">
+    <div class="col-lg-5">
+        <div class="card mydata">
+            <div class="card-body">
+                <table id="OverallStationData" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr class="toptr">
+                            <th colspan="5" class="topth">Overall Station KPIs</th>
+                        </tr>
+                        <tr>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 20% !important;">UOM</th>
+                            <th style="width: 15% !important;">CPP540</th>
+                            <th style="width: 15% !important;">IPP300</th>
+                            <th style="width: 15% !important;">CPP900</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortTable"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card mydata">
+            <div class="card-body">
+                <table id="CoalStockData" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr class="toptr">
+                            <th colspan="5" class="topth">Coal Stock & Consumption</th>
+                        </tr>
+                        <tr>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 20% !important;">UOM</th>
+                            <th style="width: 15% !important;">CPP540</th>
+                            <th style="width: 15% !important;">IPP300</th>
+                            <th style="width: 15% !important;">CPP900</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortTable"></tbody>
+                </table>
+                <table id="CoalRakesData" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr class="toptr"><th colspan="5" class="topth">Coal Rakes & Trucks</th></tr>
+                        <tr class="hidden">
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 20% !important;">UOM</th>
+                            <th style="width: 15% !important;">CPP540</th>
+                            <th style="width: 15% !important;">IPP300</th>
+                            <th style="width: 15% !important;">CPP900</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7">
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">Gross Generation</h5>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP540GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP900GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="IPP300GG" class="viewCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">PLF</h5>
+                <div class="col-lg-4">
+                    <div class="card-body"> 
+                        <div id="CPP540PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP900PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="IPP300PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">Aux Consumption</h5>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP540AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="CPP900AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div id="IPP300AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="printdiv">
+    <button type="button" id="printBtn" class="btn btn-primary sbmt-btn"><i class="ti-printer"></i> Print</button>
+</div>*@
+<script src="~/piadmin/js/OverallStationsummary.js"></script>

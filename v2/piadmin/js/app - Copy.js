@@ -2,8 +2,9 @@ var baseServiceUrl="https://bldb.balco.in/piwebapi/";
 var user="cmdc";
 var pass="system@01";
 var afServerName="BLDB";
-var afDatabaseName="BALCOPOWER\\VEDANTA\\BALCO\\WebPortal";
-var baseurl = "https://bldb.balco.in:8081/";
+var afDatabaseName = "BALCOPOWER\\VEDANTA\\BALCO\\WebPortal";
+var baseurl = "http://localhost:61355/";
+//var baseurl = "https://bldb.balco.in:8081/";
 var enableBasicAuth=!0;
 var processJsonContent = function (url, type, data) {
 	return $.ajax({

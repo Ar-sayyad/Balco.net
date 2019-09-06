@@ -29,16 +29,11 @@ namespace Version1.Models
             SqlConnection connection = null;
 
             User objUserModel = null;
-
-            //string connectionString = @"SERVER=SERVER2008\AFINSTANCE; UID = jayesh; pwd = jayesh; DATABASE=Balcopower_db";
-
+            
             connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-            //string connectionString = @"Data Source=ASHIF-DMGLBQI\Ashif;Initial Catalog=Balcopower_db;Integrated Security=False;UID=ashif;pwd=Ecgit@123;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
-
-            //connection = new SqlConnection(connectionString);
 
             connection.Open();
-            //objSqlDataReader = new SqlDataReader();
+
             SqlDataReader objSqlDataReader = null;
             try
             {
@@ -47,7 +42,7 @@ namespace Version1.Models
 
                 cmd = new SqlCommand(sql, connection);
 
-                objSqlDataReader = cmd.ExecuteReader();//connection, CommandType.StoredProcedure, "OES_ACA_SP_Get_1095CReportRun", objSqlParameter)
+                objSqlDataReader = cmd.ExecuteReader();
                 while (objSqlDataReader.Read())
                 {
                     objUserModel = new User();

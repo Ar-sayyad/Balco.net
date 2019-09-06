@@ -1,0 +1,146 @@
+﻿<link href="~/piadmin/css/latest.css" rel="stylesheet" />
+<div class="row printPage" id="printPage">
+    <div class="col-lg-5">
+        <div class="card mydata">
+            <div class="card-body">
+                <table id="cpp540Data" class="display nowrap table table-striped  table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr class="toptr">
+                            <th colspan="6" class="topth">CPP 540MW KPIs</th>
+                        </tr>
+                        <tr>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 13% !important;">UOM</th>
+                            <th style="width: 13% !important;">Unit1</th>
+                            <th style="width: 13% !important;">Unit2</th>
+                            <th style="width: 13% !important;">Unit3</th>
+                            <th style="width: 13% !important;">Unit4</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortTable"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card mydata">
+            <div class="card-body">
+                <table id="kpiscemsData" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr class="toptr">
+                            <th colspan="6" class="topth">KPI's - CEMS</th>
+                        </tr>
+                        <tr>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 13% !important;">UOM</th>
+                            <th style="width: 13% !important;">Unit1</th>
+                            <th style="width: 13% !important;">Unit2</th>
+                            <th style="width: 13% !important;">Unit3</th>
+                            <th style="width: 13% !important;">Unit4</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortTable"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card mydata">
+            <div class="card-body">
+                <table id="kpispp" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr class="toptr">
+                            <th colspan="6" class="topth">KPI's Plant Performance</th>
+                        </tr>
+                        <tr>
+                            <th style="width: 35% !important;text-align: left;padding-left:20px;">Parameters</th>
+                            <th style="width: 13% !important;">UOM</th>
+                            <th style="width: 13% !important;">Unit1</th>
+                            <th style="width: 13% !important;">Unit2</th>
+                            <th style="width: 13% !important;">Unit3</th>
+                            <th style="width: 13% !important;">Unit4</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7">
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">Gross Generation</h5>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit1GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit2GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit3GG" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit4GG" class="viewCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">PLF</h5>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit1PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit2PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit3PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit4PLF" class="pieCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mydata marginlg">
+            <div class="card-body summaryDiv">
+                <h5 class="summaryHeading">Aux Consumption</h5>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit1AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit2AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit3AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <div id="Unit4AUX" class="viewCharts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="printdiv">
+        <button type="button" id="printBtn" class="btn btn-primary sbmt-btn"><i class="ti-printer"></i> Print</button>
+    </div>*@
+<script src="~/piadmin/js/cpp540PlantSummary.js"></script>

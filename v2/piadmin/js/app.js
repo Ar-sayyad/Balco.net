@@ -2,8 +2,9 @@ var baseServiceUrl="https://bldb.balco.in/piwebapi/";
 var user="cmdc";
 var pass="system@01";
 var afServerName="BLDB";
-var afDatabaseName="BALCOPOWER\\VEDANTA\\BALCO\\WebPortal";
-var baseurl = "https://bldb.balco.in:8081/";
+var afDatabaseName = "BALCOPOWER\\VEDANTA\\BALCO\\WebPortal";
+var baseurl = "http://localhost:61355/";
+//var baseurl = "https://bldb.balco.in:8081/";
 var enableBasicAuth=!0;
 var processJsonContent = function (url, type, data) {
 	return $.ajax({
@@ -271,7 +272,7 @@ var cpp540DGR=[
            },
            //oil & other parameters
             {
-                "title":"CPP II Import from GIS",
+                "title":"CPP540 Import from GIS",
                 "sr":17,
                 "UOM":"MU",
                 "unitname":"other",
@@ -311,7 +312,7 @@ var cpp540DGR=[
                 "path":"path={0}|PLANT2_SUPPLY.MAN"
            },            
            {
-                "title":"CPP II  Export to MRSDS & GIS",
+                "title":"CPP540  Export to MRSDS & GIS",
                  "sr":21,
                 "UOM":"MU",
                 "unitname":"other",
@@ -377,7 +378,7 @@ var cpp540DGR=[
 
 var pp1200CAM=[        
            {
-                "title":"IPP600 Coal Analysis GCV",
+                "title":"IPP300 Coal Analysis GCV",
                 "sr":1,
                 "UOM":"kcal/kg",
                 "unitname":"ipp600",
@@ -387,7 +388,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_GCV.Man"
            },          
            {
-                "title":"IPP600 Coal Analysis Fixed Carbon content",
+                "title":"IPP300Coal Analysis Fixed Carbon content",
                 "sr":2,
                 "UOM":"%",
                 "unitname":"ipp600",
@@ -397,7 +398,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Fixed_Carbon.Man"
            },
            {
-                "title":"IPP600 Coal Analysis Moisture content",
+                "title":"IPP300 Coal Analysis Moisture content",
                 "sr":3,
                 "UOM":"%",
                 "unitname":"ipp600",
@@ -407,7 +408,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Moisture.Man"
            },                     
            {
-                "title":"IPP600 Coal Analysis Volatile Matter content",
+                "title":"IPP300 Coal Analysis Volatile Matter content",
                 "sr":4,
                 "UOM":"%",
                 "unitname":"ipp600",
@@ -417,7 +418,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Volatile_Matter.Man"
            },
             {//IPP600
-                "title":"IPP600 Coal Analysis Ash content",
+                "title":"IPP300 Coal Analysis Ash content",
                 "sr":5,
                 "UOM":"%",
                 "unitname":"ipp600",
@@ -427,7 +428,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Ash.Man"
            },         
            {
-                "title":"IPP600 Coal Analysis Unburnt Carbon in Bottom Ash",
+                "title":"IPP300 Coal Analysis Unburnt Carbon in Bottom Ash",
                 "sr":6,
                 "UOM":"%",
                 "unitname":"ipp600",
@@ -437,7 +438,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Unburnt_BotAsh.Man"
            },
            {
-                "title":"IPP600 Coal Analysis Unburnt Carbon in Fly Ash",
+                "title":"IPP300 Coal Analysis Unburnt Carbon in Fly Ash",
                 "sr":7,
                 "UOM":"%",
                 "unitname":"ipp600",
@@ -451,7 +452,7 @@ var pp1200CAM=[
            
                      
             {
-                "title":"CPP600 Coal Analysis GCV",
+                "title":"CPP900 Coal Analysis GCV",
                 "sr":8,
                 "UOM":"kcal/kg",
                 "unitname":"cpp600",
@@ -461,7 +462,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_GCV.Man"
            },
             {
-                "title":"CPP600 Coal Analysis Fixed Carbon content",
+                "title":"CPP900 Coal Analysis Fixed Carbon content",
                 "sr":9,
                 "UOM":"%",
                 "unitname":"cpp600",
@@ -471,7 +472,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Fixed_Carbon.Man"
            }, 
            {
-                "title":"CPP600 Coal Analysis Moisture content",
+                "title":"CPP900 Coal Analysis Moisture content",
                 "sr":10,
                 "UOM":"%",
                 "unitname":"cpp600",
@@ -481,7 +482,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Moisture.Man"
            },            
            {
-                "title":"CPP600 Coal Analysis Volatile Matter content",
+                "title":"CPP900 Coal Analysis Volatile Matter content",
                 "sr":11,
                 "UOM":"%",
                 "unitname":"cpp600",
@@ -491,7 +492,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Volatile_Matter.Man"
            },
            {
-                "title":"CPP600 Coal Analysis Ash content",
+                "title":"CPP900 Coal Analysis Ash content",
                 "sr":12,
                 "UOM":"%",
                 "unitname":"cpp600",
@@ -501,7 +502,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Ash.Man"
            },          
            {
-                "title":"CPP600 Coal Analysis Unburnt Carbon in Bottom Ash",
+                "title":"CPP900 Coal Analysis Unburnt Carbon in Bottom Ash",
                 "sr":13,
                 "UOM":"%",
                 "unitname":"cpp600",
@@ -511,7 +512,7 @@ var pp1200CAM=[
                 "path":"path={0}|CoalAnalysis_Unburnt_BotAsh.Man"
            },
            {
-                "title":"CPP600 Coal Analysis Unburnt Carbon in Fly Ash",
+                "title":"CPP900 Coal Analysis Unburnt Carbon in Fly Ash",
                 "sr":14,
                 "UOM":"%",
                 "unitname":"cpp600",
@@ -547,7 +548,7 @@ var ipp600DGR=[
                 "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
                 "path":"path={0}|NET_GEN.MAN"
            },
-          {//IPP600 UNIT1
+          /*{//IPP600 UNIT1
                 "title":"Unit1 Aux. Consumption",
                 "sr":3,
                 "UOM":"MU",
@@ -556,10 +557,10 @@ var ipp600DGR=[
                 "parameter":"AUX_CONS.MAN",
                 "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
                 "path":"path={0}|AUX_CONS.MAN"
-           },           
+           }, */          
            {//IPP600 UNIT1
                 "title":"Unit1 Total Aux. Cons.(Unit+ST)",
-                "sr":4,
+                "sr":3,
                 "UOM":"MU",
                 "unitname":"ipp600unit1",
                 "tagname":"BALCO_1200MW_IPP600_U1_TOTAL_AUX_CONS.MAN",
@@ -569,7 +570,7 @@ var ipp600DGR=[
            },
            {//IPP600 UNIT1
                 "title":"Unit1 Coal Consumption",
-                "sr":5,
+                "sr":4,
                 "UOM":"MU",
                 "unitname":"ipp600unit1",
                 "tagname":"BALCO_1200MW_IPP600_U1_COAL_CONS.MAN",
@@ -579,7 +580,7 @@ var ipp600DGR=[
            },
            {//IPP600 UNIT1
                 "title":"Unit1 Raw Water Consumption",
-                "sr":6,
+                "sr":5,
                 "UOM":"m3",
                 "unitname":"ipp600unit1",
                 "tagname":"BALCO_1200MW_IPP600_U1_RAW_WTR_CONS.MAN",
@@ -589,7 +590,7 @@ var ipp600DGR=[
            },
             {//IPP600 UNIT1
                 "title":"Unit1 H2 Consumption",
-                "sr":7,
+                "sr":6,
                 "UOM":"m3",
                 "unitname":"ipp600unit1",
                 "tagname":"BALCO_1200MW_IPP600_U1_H2_CONS.MAN",
@@ -599,7 +600,7 @@ var ipp600DGR=[
            },             
            {//IPP600 UNIT1
                 "title":"Unit1 Trippings",
-                "sr":8,
+                "sr":7,
                 "UOM":"m3",
                 "unitname":"ipp600unit1",
                 "tagname":"BALCO_1200MW_IPP600_U1_TRIPS.MAN",
@@ -607,89 +608,89 @@ var ipp600DGR=[
                 "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
                 "path":"path={0}|TRIPS.MAN"
            },
-           
-           //UNIT 2
-           
-            {//IPP600 UNIT2
-                "title":"Unit2 Gross Generation",
-                "sr":9,
-                "UOM":"MU",
-                "unitname":"ipp600unit2",
-                "tagname":"BALCO_1200MW_IPP600_U2_GRS_GEN.MAN",
-                "parameter":"GRS_GEN.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
-                "path":"path={0}|GRS_GEN.MAN"
-           },           
-            {//IPP600 UNIT2
-                "title":"Unit2 Net Generation",
-                "sr":10,
-                "UOM":"MU",
-                "unitname":"ipp600unit2",
-                "tagname":"BALCO_1200MW_IPP600_U2_NET_GEN.MAN",
-                "parameter":"NET_GEN.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
-                "path":"path={0}|NET_GEN.MAN"
-           },
-            {//IPP600 UNIT2
-                "title":"Unit2 Aux. Consumption",
-                "sr":11,
-                "UOM":"MU",
-                "unitname":"ipp600unit2",
-                "tagname":"BALCO_1200MW_IPP600_U2_AUX_CONS.MAN",
-                "parameter":"AUX_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
-                "path":"path={0}|AUX_CONS.MAN"
-           },           
-           {//IPP600 UNIT2
-                "title":"Unit2 Total Aux. Cons.(Unit+ST)",
-                "sr":12,
-                "UOM":"MU",
-                "unitname":"ipp600unit2",
-                "tagname":"BALCO_1200MW_IPP600_U2_TOTAL_AUX_CONS.MAN",
-                "parameter":"TOTAL_AUX_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
-                "path":"path={0}|TOTAL_AUX_CONS.MAN"
-           }, 
-            {//IPP600 UNIT2
-                "title":"Unit2 Coal Consumption",
-                "sr":13,
-                "UOM":"MU",
-                "unitname":"ipp600unit2",
-                "tagname":"BALCO_1200MW_IPP600_U2_COAL_CONS.MAN",
-                "parameter":"COAL_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
-                "path":"path={0}|COAL_CONS.MAN"
-           },
-            {//IPP600 UNIT2
-                "title":"Unit2 Raw Water Consumption",
-                "sr":14,
-                "UOM":"m3",
-                "unitname":"ipp600unit2",
-                "tagname":"BALCO_1200MW_IPP600_U2_RAW_WTR_CONS.MAN",
-                "parameter":"RAW_WTR_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
-                "path":"path={0}|RAW_WTR_CONS.MAN"
-           },
-            {//IPP600 UNIT2
-                "title":"Unit2 H2 Consumption",
-                "sr":15,
-                "UOM":"m3",
-                "unitname":"ipp600unit2",
-                "tagname":"BALCO_1200MW_IPP600_U2_H2_CONS.MAN",
-                "parameter":"H2_CONS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
-                "path":"path={0}|H2_CONS.MAN"
-           },         
-           {//IPP600 UNIT2
-                "title":"Unit2 Trippings",
-                "sr":16,
-                "UOM":"m3",
-                "unitname":"ipp600unit2",
-                "tagname":"BALCO_1200MW_IPP600_U2_TRIPS.MAN",
-                "parameter":"TRIPS.MAN",
-                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
-                "path":"path={0}|TRIPS.MAN"
-           },
+//           
+//           //UNIT 2
+//           
+//            {//IPP600 UNIT2
+//                "title":"Unit2 Gross Generation",
+//                "sr":8,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit2",
+//                "tagname":"BALCO_1200MW_IPP600_U2_GRS_GEN.MAN",
+//                "parameter":"GRS_GEN.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+//                "path":"path={0}|GRS_GEN.MAN"
+//           },           
+//            {//IPP600 UNIT2
+//                "title":"Unit2 Net Generation",
+//                "sr":9,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit2",
+//                "tagname":"BALCO_1200MW_IPP600_U2_NET_GEN.MAN",
+//                "parameter":"NET_GEN.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+//                "path":"path={0}|NET_GEN.MAN"
+//           },
+//            /*{//IPP600 UNIT2
+//                "title":"Unit2 Aux. Consumption",
+//                "sr":10,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit2",
+//                "tagname":"BALCO_1200MW_IPP600_U2_AUX_CONS.MAN",
+//                "parameter":"AUX_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+//                "path":"path={0}|AUX_CONS.MAN"
+//           }, */          
+//           {//IPP600 UNIT2
+//                "title":"Unit2 Total Aux. Cons.(Unit+ST)",
+//                "sr":10,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit2",
+//                "tagname":"BALCO_1200MW_IPP600_U2_TOTAL_AUX_CONS.MAN",
+//                "parameter":"TOTAL_AUX_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+//                "path":"path={0}|TOTAL_AUX_CONS.MAN"
+//           }, 
+//            {//IPP600 UNIT2
+//                "title":"Unit2 Coal Consumption",
+//                "sr":11,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit2",
+//                "tagname":"BALCO_1200MW_IPP600_U2_COAL_CONS.MAN",
+//                "parameter":"COAL_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+//                "path":"path={0}|COAL_CONS.MAN"
+//           },
+//            {//IPP600 UNIT2
+//                "title":"Unit2 Raw Water Consumption",
+//                "sr":12,
+//                "UOM":"m3",
+//                "unitname":"ipp600unit2",
+//                "tagname":"BALCO_1200MW_IPP600_U2_RAW_WTR_CONS.MAN",
+//                "parameter":"RAW_WTR_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+//                "path":"path={0}|RAW_WTR_CONS.MAN"
+//           },
+//            {//IPP600 UNIT2
+//                "title":"Unit2 H2 Consumption",
+//                "sr":13,
+//                "UOM":"m3",
+//                "unitname":"ipp600unit2",
+//                "tagname":"BALCO_1200MW_IPP600_U2_H2_CONS.MAN",
+//                "parameter":"H2_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+//                "path":"path={0}|H2_CONS.MAN"
+//           },         
+//           {//IPP600 UNIT2
+//                "title":"Unit2 Trippings",
+//                "sr":14,
+//                "UOM":"m3",
+//                "unitname":"ipp600unit2",
+//                "tagname":"BALCO_1200MW_IPP600_U2_TRIPS.MAN",
+//                "parameter":"TRIPS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+//                "path":"path={0}|TRIPS.MAN"
+//           },
            
            //Other 
            
@@ -715,7 +716,7 @@ var ipp600DGR=[
            //},           
            {//IPP600 OTHER
                 "title":"LDO Opening Stock - as on today",
-                "sr":17,
+                "sr":8,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_LDO_OPENING_STOCK_TODAY.MAN",
@@ -725,7 +726,7 @@ var ipp600DGR=[
            },  
             {//IPP600 OTHER
                 "title":"HFO Opening Stock - as on today",
-                "sr":18,
+                "sr":9,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_HFO_OPENING_STOCK_TODAY.MAN",
@@ -735,7 +736,7 @@ var ipp600DGR=[
            },           
            {//IPP600 OTHER
                 "title":"LDO # of oil tankers - as on today",
-                "sr":19,
+                "sr":10,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_LDO_TANKERS_TODAY.MAN",
@@ -745,7 +746,7 @@ var ipp600DGR=[
            },           
            {//IPP600 OTHER
                 "title":"HFO # of oil tankers - as on today",
-                "sr":20,
+                "sr":11,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_HFO_TANKERS_TODAY.MAN",
@@ -755,7 +756,7 @@ var ipp600DGR=[
            },
            {//IPP600 OTHER
                 "title":"LDO Closing Stock - as on today",
-                "sr":21,
+                "sr":12,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_LDO_CLOSING_STOCK_TODAY.MAN",
@@ -765,7 +766,7 @@ var ipp600DGR=[
            },
             {//IPP600 OTHER
                 "title":"HFO Closing Stock - as on today",
-                "sr":22,
+                "sr":13,
                 "UOM":"kl",
                 "unitname":"ipp600other",
                 "tagname":"BALCO_1200MW_HFO_CLOSING_STOCK_TODAY.MAN",
@@ -781,9 +782,172 @@ var ipp600DGR=[
 /** CPP600 DGR Start**/
 
 var cpp600DGR=[
+//        {//IPP600 UNIT1
+//                "title":"Unit1 Gross Generation",
+//                "sr":1,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit1",
+//                "tagname":"BALCO_1200MW_IPP600_U1_GRS_GEN.MAN",
+//                "parameter":"GRS_GEN.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
+//                "path":"path={0}|GRS_GEN.MAN"
+//           },
+//            {//IPP600 UNIT1
+//                "title":"Unit1 Net Generation",                
+//                "sr":2,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit1",
+//                "tagname":"BALCO_1200MW_IPP600_U1_NET_GEN.MAN",
+//                "parameter":"NET_GEN.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
+//                "path":"path={0}|NET_GEN.MAN"
+//           },
+//          /*{//IPP600 UNIT1
+//                "title":"Unit1 Aux. Consumption",
+//                "sr":3,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit1",
+//                "tagname":"BALCO_1200MW_IPP600_U1_AUX_CONS.MAN",
+//                "parameter":"AUX_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
+//                "path":"path={0}|AUX_CONS.MAN"
+//           }, */          
+//           {//IPP600 UNIT1
+//                "title":"Unit1 Total Aux. Cons.(Unit+ST)",
+//                "sr":3,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit1",
+//                "tagname":"BALCO_1200MW_IPP600_U1_TOTAL_AUX_CONS.MAN",
+//                "parameter":"TOTAL_AUX_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
+//                "path":"path={0}|TOTAL_AUX_CONS.MAN"
+//           },
+//           {//IPP600 UNIT1
+//                "title":"Unit1 Coal Consumption",
+//                "sr":4,
+//                "UOM":"MU",
+//                "unitname":"ipp600unit1",
+//                "tagname":"BALCO_1200MW_IPP600_U1_COAL_CONS.MAN",
+//                "parameter":"COAL_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
+//                "path":"path={0}|COAL_CONS.MAN"
+//           },
+//           {//IPP600 UNIT1
+//                "title":"Unit1 Raw Water Consumption",
+//                "sr":5,
+//                "UOM":"m3",
+//                "unitname":"ipp600unit1",
+//                "tagname":"BALCO_1200MW_IPP600_U1_RAW_WTR_CONS.MAN",
+//                "parameter":"RAW_WTR_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
+//                "path":"path={0}|RAW_WTR_CONS.MAN"
+//           },
+//            {//IPP600 UNIT1
+//                "title":"Unit1 H2 Consumption",
+//                "sr":6,
+//                "UOM":"m3",
+//                "unitname":"ipp600unit1",
+//                "tagname":"BALCO_1200MW_IPP600_U1_H2_CONS.MAN",
+//                "parameter":"H2_CONS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
+//                "path":"path={0}|H2_CONS.MAN"
+//           },             
+//           {//IPP600 UNIT1
+//                "title":"Unit1 Trippings",
+//                "sr":7,
+//                "UOM":"m3",
+//                "unitname":"ipp600unit1",
+//                "tagname":"BALCO_1200MW_IPP600_U1_TRIPS.MAN",
+//                "parameter":"TRIPS.MAN",
+//                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%201",
+//                "path":"path={0}|TRIPS.MAN"
+//           },
+           
+           //UNIT 2
+           
+            {//IPP600 UNIT2
+                "title":"Unit2 Gross Generation",
+                "sr":1,
+                "UOM":"MU",
+                "unitname":"ipp600unit2",
+                "tagname":"BALCO_1200MW_IPP600_U2_GRS_GEN.MAN",
+                "parameter":"GRS_GEN.MAN",
+                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+                "path":"path={0}|GRS_GEN.MAN"
+           },           
+            {//IPP600 UNIT2
+                "title":"Unit2 Net Generation",
+                "sr":2,
+                "UOM":"MU",
+                "unitname":"ipp600unit2",
+                "tagname":"BALCO_1200MW_IPP600_U2_NET_GEN.MAN",
+                "parameter":"NET_GEN.MAN",
+                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+                "path":"path={0}|NET_GEN.MAN"
+           },
+            /*{//IPP600 UNIT2
+                "title":"Unit2 Aux. Consumption",
+                "sr":10,
+                "UOM":"MU",
+                "unitname":"ipp600unit2",
+                "tagname":"BALCO_1200MW_IPP600_U2_AUX_CONS.MAN",
+                "parameter":"AUX_CONS.MAN",
+                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+                "path":"path={0}|AUX_CONS.MAN"
+           }, */          
+           {//IPP600 UNIT2
+                "title":"Unit2 Total Aux. Cons.(Unit+ST)",
+                "sr":3,
+                "UOM":"MU",
+                "unitname":"ipp600unit2",
+                "tagname":"BALCO_1200MW_IPP600_U2_TOTAL_AUX_CONS.MAN",
+                "parameter":"TOTAL_AUX_CONS.MAN",
+                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+                "path":"path={0}|TOTAL_AUX_CONS.MAN"
+           }, 
+            {//IPP600 UNIT2
+                "title":"Unit2 Coal Consumption",
+                "sr":4,
+                "UOM":"MU",
+                "unitname":"ipp600unit2",
+                "tagname":"BALCO_1200MW_IPP600_U2_COAL_CONS.MAN",
+                "parameter":"COAL_CONS.MAN",
+                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+                "path":"path={0}|COAL_CONS.MAN"
+           },
+            {//IPP600 UNIT2
+                "title":"Unit2 Raw Water Consumption",
+                "sr":5,
+                "UOM":"m3",
+                "unitname":"ipp600unit2",
+                "tagname":"BALCO_1200MW_IPP600_U2_RAW_WTR_CONS.MAN",
+                "parameter":"RAW_WTR_CONS.MAN",
+                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+                "path":"path={0}|RAW_WTR_CONS.MAN"
+           },
+            {//IPP600 UNIT2
+                "title":"Unit2 H2 Consumption",
+                "sr":6,
+                "UOM":"m3",
+                "unitname":"ipp600unit2",
+                "tagname":"BALCO_1200MW_IPP600_U2_H2_CONS.MAN",
+                "parameter":"H2_CONS.MAN",
+                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+                "path":"path={0}|H2_CONS.MAN"
+           },         
+           {//IPP600 UNIT2
+                "title":"Unit2 Trippings",
+                "sr":7,
+                "UOM":"m3",
+                "unitname":"ipp600unit2",
+                "tagname":"BALCO_1200MW_IPP600_U2_TRIPS.MAN",
+                "parameter":"TRIPS.MAN",
+                "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\IPP%20-%20600MW\\Unit%202",
+                "path":"path={0}|TRIPS.MAN"
+           },
            {//CPP600 UNIT3
                 "title":"Unit3 Gross Generation",
-                "sr":1,
+                "sr":8,
                 "UOM":"MU",
                 "unitname":"cpp600unit3",
                 "tagname":"BALCO_1200MW_IPP600_U3_GRS_GEN.MAN",
@@ -793,7 +957,7 @@ var cpp600DGR=[
            },
             {//CPP600 UNIT3
                 "title":"Unit3 Net Generation",
-                "sr":2,
+                "sr":9,
                 "UOM":"MU",
                 "unitname":"cpp600unit3",
                 "tagname":"BALCO_1200MW_IPP600_U3_NET_GEN.MAN",
@@ -801,7 +965,7 @@ var cpp600DGR=[
                 "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\CPP%20-%20600MW\\Unit%203",
                 "path":"path={0}|NET_GEN.MAN"
            }, 
-          {//CPP600 UNIT3
+          /*{//CPP600 UNIT3
                 "title":"Unit3 Aux. Consumption",
                 "sr":3,
                 "UOM":"MU",
@@ -810,10 +974,10 @@ var cpp600DGR=[
                 "parameter":"AUX_CONS.MAN",
                 "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\CPP%20-%20600MW\\Unit%203",
                 "path":"path={0}|AUX_CONS.MAN"
-           },
+           },*/
            {//CPP600 UNIT3
                 "title":"Unit3 Total Aux. Cons.(Unit+ST)",
-                "sr":4,
+                "sr":10,
                 "UOM":"MU",
                 "unitname":"cpp600unit3",
                 "tagname":"BALCO_1200MW_IPP600_U3_TOTAL_AUX_CONS.MAN",
@@ -823,7 +987,7 @@ var cpp600DGR=[
            },           
            {//CPP600 UNIT3
                 "title":"Unit3 Coal Consumption",
-                "sr":5,
+                "sr":11,
                 "UOM":"MU",
                 "unitname":"cpp600unit3",
                 "tagname":"BALCO_1200MW_IPP600_U3_COAL_CONS.MAN",
@@ -833,7 +997,7 @@ var cpp600DGR=[
            },
            {//CPP600 UNIT3
                 "title":"Unit3 Raw Water Consumption",
-                "sr":6,
+                "sr":12,
                 "UOM":"m3",
                 "unitname":"cpp600unit3",
                 "tagname":"BALCO_1200MW_IPP600_U3_RAW_WTR_CONS.MAN",
@@ -843,7 +1007,7 @@ var cpp600DGR=[
            },
            {//CPP600 UNIT3
                 "title":"Unit3 H2 Consumption",
-                "sr":7,
+                "sr":13,
                 "UOM":"m3",
                 "unitname":"cpp600unit3",
                 "tagname":"BALCO_1200MW_IPP600_U3_H2_CONS.MAN",
@@ -853,7 +1017,7 @@ var cpp600DGR=[
            },
            {//CPP600 UNIT3
                 "title":"Unit3 Trippings",
-                "sr":8,
+                "sr":14,
                 "UOM":"m3",
                 "unitname":"cpp600unit3",
                 "tagname":"BALCO_1200MW_IPP600_U3_TRIPS.MAN",
@@ -866,7 +1030,7 @@ var cpp600DGR=[
            
            {//CPP600 UNIT4
                 "title":"Unit4 Gross Generation",
-                "sr":9,
+                "sr":15,
                 "UOM":"MU",
                 "unitname":"cpp600unit4",
                 "tagname":"BALCO_1200MW_IPP600_U4_GRS_GEN.MAN",
@@ -876,7 +1040,7 @@ var cpp600DGR=[
            },
             {//CPP600 UNIT4
                 "title":"Unit4 Net Generation",
-                "sr":10,
+                "sr":16,
                 "UOM":"MU",
                 "unitname":"cpp600unit4",
                 "tagname":"BALCO_1200MW_IPP600_U4_NET_GEN.MAN",
@@ -884,7 +1048,7 @@ var cpp600DGR=[
                 "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\CPP%20-%20600MW\\Unit%204",
                 "path":"path={0}|NET_GEN.MAN"
            },
-           {//CPP600 UNIT4
+           /*{//CPP600 UNIT4
                 "title":"Unit4 Aux. Consumption",
                 "sr":11,
                 "UOM":"MU",
@@ -893,10 +1057,10 @@ var cpp600DGR=[
                 "parameter":"AUX_CONS.MAN",
                 "tag_path":"\\\\BLDB\\BALCOPOWER\\VEDANTA\\BALCO\\PP%20-%201200MW\\CPP%20-%20600MW\\Unit%204",
                 "path":"path={0}|AUX_CONS.MAN"
-           },
+           },*/
            {//CPP600 UNIT4
                 "title":"Unit4 Total Aux. Cons.(Unit+ST)",
-                "sr":12,
+                "sr":17,
                 "UOM":"MU",
                 "unitname":"cpp600unit4",
                 "tagname":"BALCO_1200MW_IPP600_U4_TOTAL_AUX_CONS.MAN",
@@ -906,7 +1070,7 @@ var cpp600DGR=[
            },                      
            {//CPP600 UNIT4
                 "title":"Unit4 Coal Consumption",
-                "sr":13,
+                "sr":18,
                 "UOM":"MU",
                 "unitname":"cpp600unit4",
                 "tagname":"BALCO_1200MW_IPP600_U2_COAL_CONS.MAN",
@@ -916,7 +1080,7 @@ var cpp600DGR=[
            },              
            {//CPP600 UNIT4
                 "title":"Unit4 Raw Water Consumption",
-                "sr":14,
+                "sr":19,
                 "UOM":"m3",
                 "unitname":"cpp600unit4",
                 "tagname":"BALCO_1200MW_IPP600_U4_RAW_WTR_CONS.MAN",
@@ -926,7 +1090,7 @@ var cpp600DGR=[
            },        
            {//CPP600 UNIT4
                 "title":"Unit4 H2 Consumption",
-                "sr":15,
+                "sr":20,
                 "UOM":"m3",
                 "unitname":"cpp600unit4",
                 "tagname":"BALCO_1200MW_IPP600_U4_H2_CONS.MAN",
@@ -936,7 +1100,7 @@ var cpp600DGR=[
            },
            {//CPP600 UNIT4
                 "title":"Unit4 Trippings",
-                "sr":16,
+                "sr":21,
                 "UOM":"m3",
                 "unitname":"cpp600unit4",
                 "tagname":"BALCO_1200MW_IPP600_U4_TRIPS.MAN",
@@ -1030,7 +1194,7 @@ var plantHead = [
                 "sr": 14,
                 "afname": "Belt Utilisation Factor",
                 "path": "path={0}|ACT&path={0}|BP",
-                "digits": 0
+                "digits": 2
             }
 ];
 var kpisOverallPlant = [{

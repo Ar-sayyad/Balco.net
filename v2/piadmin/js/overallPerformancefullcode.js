@@ -102,6 +102,7 @@ $.each(elementPerformance, function (key1) {
                     "gradientRatio": [0.5, 0, -0.5]
                 });
             });
+            console.log(cols);
             AmCharts.makeChart(plantPerformance[key].div + elementPerformance[key1].afname, {
                 "theme": "none",
                 "type": "gauge",

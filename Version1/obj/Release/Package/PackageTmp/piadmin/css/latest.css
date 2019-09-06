@@ -9,12 +9,12 @@ thead tr {
 }
 
 .table td {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .mydata {
-    padding: 5px;
-    margin: 5px;
+    padding: 1px;
+    margin: 3px;
     border-radius: 3px;
     box-shadow: 5px 5px 12px rgb(158, 157, 157);
 }
@@ -43,7 +43,7 @@ thead tr {
 }
 
 .marginlg {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .toptr {
@@ -71,11 +71,13 @@ thead tr {
 }
 
 .col-lg-3, .col-lg-4 {
-    float: left
+    float: left;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 
 .summaryDiv {
-    height: 216px;
+    height: 214px;
 }
 
 .summaryHeading {
@@ -83,16 +85,21 @@ thead tr {
     font-weight: 600;
     background-color: #1771ca;
     color: #ffffff;
-    padding: 5px;
+    padding: 6px;
     margin-bottom: 10px;
     font-size: 15px;
 }
 
 .viewCharts {
+    min-width: 200px;
+    height: 225px;
     width: 100%;
-    height: 220px;
 }
 
+.viewChartsOverall {
+    height: 225px;
+    width: 100%;
+}
 .pieCharts {
     width: 100%;
     height: 190px;

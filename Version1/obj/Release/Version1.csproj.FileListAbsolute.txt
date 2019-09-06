@@ -245,4 +245,3 @@ G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.csproj.CoreCompileInpu
 G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.csproj.CopyComplete
 G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.dll
 G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.pdb
-G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.csprojAssemblyReference.cache
