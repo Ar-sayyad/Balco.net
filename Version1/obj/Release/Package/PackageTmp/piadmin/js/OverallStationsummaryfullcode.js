@@ -175,7 +175,7 @@ $.each(OverallStationAnalysis, function (key) {
             }];
             var decimal = '';
             $.each(OverallStationAnalysis[key].digits, function (key1) {
-                if (OverallStationAnalysis[key].digits[key1].name == elementName1) {
+                if (OverallStationAnalysis[key].digits[key1].name === elementName1) {
                     decimal = OverallStationAnalysis[key].digits[key1].decimal;
                 }
             });
@@ -195,15 +195,15 @@ $.each(OverallStationAnalysis, function (key) {
                         }
                     }
                 }
-                if (attrName1 == 'CPP540') {
+                if (attrName1 === 'CPP540') {
                     elementItems1.push({
                         'CPP540': attrValue
                     }); //THIRD
-                } else if (attrName1 == 'CPP600') {
+                } else if (attrName1 === 'CPP600') {
                     elementItems1.push({
                         'CPP600': attrValue
                     });
-                } else if (attrName1 == 'IPP600') {
+                } else if (attrName1 === 'IPP600') {
                     elementItems1.push({
                         'IPP600': attrValue
                     });
@@ -305,19 +305,19 @@ $.each(summaryPerformance, function (key1) {
                                 var attrV = batchResult.responseJSON.values.Content.Items[valuesID].Content.Value;
                             }
                         }
-                        if (attrName == 'color') {
+                        if (attrName === 'color') {
                             elementItems[attrID + 1] = ({
                                 'color': attrV
                             });
-                        } else if (attrName == 'StartValue') {
+                        } else if (attrName === 'StartValue') {
                             elementItems[attrID + 1] = ({
                                 'StartValue': attrV
                             });
-                        } else if (attrName == 'endValue') {
+                        } else if (attrName === 'endValue') {
                             elementItems[attrID + 1] = ({
                                 'endValue': attrV
                             });
-                        } else if (attrName == 'Realtime_MW') {
+                        } else if (attrName === 'Realtime_MW') {
                             elementItems[attrID + 1] = ({
                                 'Realtime_MW': attrV
                             });
@@ -326,7 +326,7 @@ $.each(summaryPerformance, function (key1) {
                     });
                     rankingElements[elementID] = elementItems;
                 });
-                var marker = rankingElements[2][2].StartValue;
+                var marker = (rankingElements[0][4].Realtime_MW).toFixed(2);
                 var StartValue = rankingElements[0][2].StartValue;
                 var endval = rankingElements[0][3].endValue;
                 var valueInterval = Math.round(rankingElements[0][3].endValue / 4);
@@ -350,8 +350,8 @@ $.each(summaryPerformance, function (key1) {
                     "startDuration": 1,
                     "axes": [{
                         "topTextFontSize": 12,
-                        "topTextYOffset": 5,
-                        "topText": plantSummaryPerformance[key].title,
+                        "topTextYOffset": 50,
+                        "topText": plantSummaryPerformance[key].title + "\n " + marker + " MW",
                         "topTextColor": "#0288c5",
                         "color": "#ffef61",
                         "fontSize": 10,

@@ -332,7 +332,7 @@ $.each(summaryPerformance, function (key1) {
                     });
                     rankingElements[elementID] = elementItems;
                 });
-                var marker = rankingElements[2][2].StartValue;
+                var marker = (rankingElements[0][4].Realtime_MW).toFixed(2);
                 var StartValue = rankingElements[0][2].StartValue;
                 var endval = rankingElements[0][3].endValue;
                 var valueInterval = Math.round(rankingElements[0][3].endValue / 4);
@@ -356,8 +356,8 @@ $.each(summaryPerformance, function (key1) {
                     "startDuration": 1,
                     "axes": [{
                         "topTextFontSize": 12,
-                        "topTextYOffset": 5,
-                        "topText": plantSummaryPerformance[key].title,
+                        "topTextYOffset": 50,
+                        "topText": plantSummaryPerformance[key].title + "\n " + marker + " MW",
                         "topTextColor": "#0288c5",
                         "color": "#ffef61",
                         "fontSize": 10,
