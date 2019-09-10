@@ -29,7 +29,7 @@ var processJsonContent = function (url, type, data) {
 var makeBasicAuth = function (user, password) {
 	var tok = user + ':' + password;
 	var hash = window.btoa(tok);
-	return "Basic " + hash
+    return "Basic " + hash;
 }
 
 
@@ -1195,8 +1195,7 @@ var plantHead = [
                 "afname": "Belt Utilisation Factor",
                 "path": "path={0}|ACT&path={0}|BP",
                 "digits": 2
-            }
-];
+            }];
 var kpisOverallPlant = [{
 		"afname": "PLF",
 		"div": "plantloadfactor",
@@ -1226,9 +1225,7 @@ var kpisOverallPlant = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "PAF",
 		"div": "plantAvailabilityfactor",
@@ -1258,9 +1255,7 @@ var kpisOverallPlant = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "Trips",
 		"div": "trips",
@@ -1278,9 +1273,7 @@ var kpisOverallPlant = [{
 			"valueField": "Trips",
 			"fixedColumnWidth": 18
 		}]
-	}
-
-	,
+	},
 	{
 		"afname": "TubeLeaks",
 		"div": "tubeleaks",
@@ -1298,9 +1291,7 @@ var kpisOverallPlant = [{
 			"valueField": "TubeLeaks",
 			"fixedColumnWidth": 18
 		}]
-	}
-
-	,
+	},
 	{
 		"afname": "GrossGenration",
 		"div": "grossgeneration",
@@ -1330,9 +1321,7 @@ var kpisOverallPlant = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "NetGeneration",
 		"div": "netgeneration",
@@ -1362,9 +1351,7 @@ var kpisOverallPlant = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "AuxConsumption",
 		"div": "auxconsumption",
@@ -1394,9 +1381,7 @@ var kpisOverallPlant = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "GrossHeatRate",
 		"div": "grossheatrate",
@@ -1426,9 +1411,7 @@ var kpisOverallPlant = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "GCV",
 		"div": "gascalorificValue",
@@ -1458,9 +1441,7 @@ var kpisOverallPlant = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "SCC@3600",
 		"div": "scc360",
@@ -1490,9 +1471,7 @@ var kpisOverallPlant = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-];
+	}];
 var performanceUnits = [{
 		"afname": "ULF",
 		"div": "unitloadfactor",
@@ -1501,9 +1480,7 @@ var performanceUnits = [{
 		"type": "pie",
 		"path": "path={0}|ULF&path={0}|Losses",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "UAF",
 		"div": "unitAvailabilityfactor",
@@ -1512,9 +1489,7 @@ var performanceUnits = [{
 		"type": "pie",
 		"path": "path={0}|UAF&path={0}|Losses",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "GrossGenerationMU",
 		"div": "grossgeneration",
@@ -1523,9 +1498,7 @@ var performanceUnits = [{
 		"type": "serial",
 		"path": "path={0}|BP&path={0}|ACT",
 		"balloonText": "Gross:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "NetGenerationMU",
 		"div": "netgeneration",
@@ -1534,9 +1507,7 @@ var performanceUnits = [{
 		"type": "serial",
 		"path": "path={0}|BP&path={0}|ACT",
 		"balloonText": "Net:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "AuxConsumptionMU",
 		"div": "auxconsumption",
@@ -1545,9 +1516,7 @@ var performanceUnits = [{
 		"type": "serial",
 		"path": "path={0}|BP&path={0}|ACT",
 		"balloonText": "Aux:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "BoilerEFF_IO",
 		"div": "boilereffio",
@@ -1556,9 +1525,7 @@ var performanceUnits = [{
 		"type": "pie",
 		"path": "path={0}|IO&path={0}|Losses",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "BoilerEFF_HL",
 		"div": "boilereffhl",
@@ -1567,9 +1534,7 @@ var performanceUnits = [{
 		"type": "pie",
 		"path": "path={0}|HL&path={0}|Losses",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "Heatrate",
 		"div": "heatrate",
@@ -1578,9 +1543,7 @@ var performanceUnits = [{
 		"type": "serial",
 		"path": "path={0}|BP&path={0}|ACT",
 		"balloonText": "HeatRate:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "SCC",
 		"div": "scc",
@@ -1589,9 +1552,7 @@ var performanceUnits = [{
 		"type": "serial",
 		"path": "path={0}|BP&path={0}|ACT",
 		"balloonText": "SCC:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "CoalConsumptionMT",
 		"div": "coalconsumption",
@@ -1600,9 +1561,7 @@ var performanceUnits = [{
 		"type": "serial",
 		"path": "path={0}|BP&path={0}|ACT",
 		"balloonText": "Coal:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "UnitOverallEFF",
 		"div": "unitoverall",
@@ -1611,9 +1570,7 @@ var performanceUnits = [{
 		"type": "pie",
 		"path": "path={0}|Overall_EFF&path={0}|Losses",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "TurbineEfficiency",
 		"div": "turbine",
@@ -1622,9 +1579,7 @@ var performanceUnits = [{
 		"type": "pie",
 		"path": "path={0}|Turbine&path={0}|Losses",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-];
+	}];
 var boilerPerformance = [{
 		"afname": "BoilerEfficiency1",
 		"div": "boilerOneEfficiency",
@@ -1633,9 +1588,7 @@ var boilerPerformance = [{
 		"type": "pie",
 		"path": "path={0}|Efficiency&path={0}|L1&path={0}|L2&path={0}|L3",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "BoilerEfficiency2",
 		"div": "boilerTwoEfficiency",
@@ -1644,9 +1597,7 @@ var boilerPerformance = [{
 		"type": "pie",
 		"path": "path={0}|Efficiency&path={0}|L1&path={0}|L2&path={0}|L3",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "BoilerEfficiency3",
 		"div": "boilerThreeEfficiency",
@@ -1655,9 +1606,7 @@ var boilerPerformance = [{
 		"type": "pie",
 		"path": "path={0}|Efficiency&path={0}|L1&path={0}|L2&path={0}|L3",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "BoilerEfficiency4",
 		"div": "boilerFourEfficiency",
@@ -1666,9 +1615,7 @@ var boilerPerformance = [{
 		"type": "pie",
 		"path": "path={0}|Efficiency&path={0}|L1&path={0}|L2&path={0}|L3",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-];
+	}];
 var allBoilerEfficiency = [{
 		"afname": "AllBoilerEfficiency",
 		"div": "boilerEfficiency",
@@ -1699,9 +1646,7 @@ var allBoilerEfficiency = [{
 				"fixedColumnWidth": 20
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "Performance",
 		"div": "plantwiseFFTPerformance",
@@ -1721,9 +1666,7 @@ var turbinePerformance = [{
 		"type": "pie",
 		"path": "path={0}|Value",
 		"balloonText": "[[title]]<br><span style='font-size:10px'><b>[[value]]</b><br> ([[percents]]%)</span>"
-	}
-
-	,
+	},
 	{
 		"afname": "SteamTurbineEffciency",
 		"div": "boilerOneEfficiency",
@@ -1733,9 +1676,7 @@ var turbinePerformance = [{
 		"path": "path={0}|value",
 		"color": "#007bff",
 		"balloonText": "Efficiency:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "CondenserEffectiveness",
 		"div": "boilerTwoEfficiency",
@@ -1745,9 +1686,7 @@ var turbinePerformance = [{
 		"path": "path={0}|value",
 		"color": "#dc3545",
 		"balloonText": "Effect.:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "SteamTurbineHPCylinderEfficiency",
 		"div": "boilerEfficiency",
@@ -1757,9 +1696,7 @@ var turbinePerformance = [{
 		"path": "path={0}|value",
 		"color": "#ffc107",
 		"balloonText": "Efficiency.:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "SteamTurbineIPCylinderEfficiency",
 		"div": "boilerThreeEfficiency",
@@ -1769,9 +1706,7 @@ var turbinePerformance = [{
 		"path": "path={0}|value",
 		"color": "#6610f2",
 		"balloonText": "Efficiency.:<br>[[value]]"
-	}
-
-	,
+	},
 	{
 		"afname": "SteamTurbineLPCylinderEfficiency",
 		"div": "boilerFourEfficiency",
@@ -1781,24 +1716,16 @@ var turbinePerformance = [{
 		"path": "path={0}|value",
 		"color": "#0b1551",
 		"balloonText": "Efficiency.:<br>[[value]]"
-	}
-
-];
+	}];
 var elementPerformance = [{
-		"afname": "OverallPlant",
-	}
-
-	,
+		"afname": "OverallPlant"
+	},
 	{
-		"afname": "540MW",
-	}
-
-	,
+		"afname": "540MW"
+	},
 	{
-		"afname": "1200MW",
-	}
-
-];
+		"afname": "1200MW"
+	}];
 var plantPerformance = [{
 		"afname": "PlantGeneration",
 		"div": "PlantGeneration",
@@ -1806,9 +1733,7 @@ var plantPerformance = [{
 		"theme": "light",
 		"type": "gauge",
 		"path": "path={0}|color&path={0}|StartValue&path={0}|endValue&path={0}|Realtime_MW"
-	}
-
-	,
+	},
 	{
 		"afname": "AuxGeneration",
 		"div": "AuxConsumption",
@@ -1816,9 +1741,7 @@ var plantPerformance = [{
 		"theme": "light",
 		"type": "gauge",
 		"path": "path={0}|color&path={0}|StartValue&path={0}|endValue&path={0}|Realtime_MW"
-	}
-
-	,
+	},
 	{
 		"afname": "PlantGrossEfficiency",
 		"div": "PlantGrossEfficiency",
@@ -1826,9 +1749,7 @@ var plantPerformance = [{
 		"theme": "light",
 		"type": "gauge",
 		"path": "path={0}|color&path={0}|StartValue&path={0}|endValue&path={0}|Realtime_MW"
-	}
-
-	,
+	},
 	{
 		"afname": "PlantGrossHeatRate",
 		"div": "PlantGrossHeatRate",
@@ -1836,117 +1757,91 @@ var plantPerformance = [{
 		"theme": "light",
 		"type": "gauge",
 		"path": "path={0}|color&path={0}|StartValue&path={0}|endValue&path={0}|Realtime_MW"
-	}
-
-];
+	}];
 var dashboardKpis = [{
 		"afname": "PLF",
 		"div": "plf",
 		"title": "PLF in (%)",
 		"theme": "light",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "PAF",
 		"div": "paf",
 		"title": "PAF in (%)",
 		"theme": "light",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "GrossGeneration",
 		"div": "grossgeneration",
 		"title": "Gross Generation",
 		"theme": "none",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "AuxConsumption",
 		"div": "auxconsumption",
 		"title": "Aux Consumption",
 		"theme": "light",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "NetGeneration",
 		"div": "netgeneration",
 		"title": "Net Generation",
 		"theme": "none",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "SCC@360",
 		"div": "scc360",
 		"title": "SCC",
 		"theme": "light",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "HeatRate",
 		"div": "heatrate",
 		"title": "Heat Rate",
 		"theme": "light",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "SOC",
 		"div": "soc",
 		"title": "SOC",
 		"theme": "light",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "OilConsumption",
 		"div": "oilconsumption",
 		"title": "Oil Consumption",
 		"theme": "light",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-	,
+	},
 	{
 		"afname": "GCV",
 		"div": "gcv",
 		"title": "GCV",
 		"theme": "light",
 		"path": "path={0}|value&path={0}|color",
-	}
-
-];
+	}];
 var mtdytd = [{
 		"afname": "MTD",
 		"theme": "light",
 		"type": "serial",
 		"path": "path={0}|BP&path={0}|ACT&path={0}|Actual",
 		"balloonText": "<b>[[value]]</b>"
-	}
-
-	,
+	},
 	{
 		"afname": "YTD",
 		"theme": "light",
 		"type": "serial",
 		"path": "path={0}|BP&path={0}|ACT&path={0}|Actual",
 		"balloonText": "<b>[[value]]</b>"
-	}
-
-];
+	}];
 var monthlyReceipt = [{
 		"afname": "CoalReceipt",
 		"div": "monthlyCoalReceipt",
@@ -1976,9 +1871,7 @@ var monthlyReceipt = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "DeliveredCost",
 		"div": "monthlyDeliveredCost",
@@ -2008,9 +1901,7 @@ var monthlyReceipt = [{
 				"fixedColumnWidth": 18
 			}
 		]
-	}
-
-	,
+	},
 	{
 		"afname": "GrossGeneration",
 		"div": "monthlyGrossgeneration",

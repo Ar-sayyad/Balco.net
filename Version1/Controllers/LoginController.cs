@@ -35,7 +35,7 @@ namespace Version1.Controllers
             returnedUser.FirstName = "Ashif";
             returnedUser.LastName = "Sayyad";
             returnedUser.Id = 1;
-            returnedUser.UserType = "1";
+            returnedUser.UserType = "2";
             //End New Code
             if (returnedUser != null)
             {
