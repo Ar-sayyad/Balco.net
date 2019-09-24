@@ -241,7 +241,6 @@ G:\E\Balco_deploy\Balco.net\Version1\bin\System.Web.WebPages.Razor.xml
 G:\E\Balco_deploy\Balco.net\Version1\bin\Newtonsoft.Json.xml
 G:\E\Balco_deploy\Balco.net\Version1\bin\Antlr3.Runtime.pdb
 G:\E\Balco_deploy\Balco.net\Version1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.csprojAssemblyReference.cache
 G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.csproj.CoreCompileInputs.cache
 G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.csproj.CopyComplete
 G:\E\Balco_deploy\Balco.net\Version1\obj\Release\Version1.dll
